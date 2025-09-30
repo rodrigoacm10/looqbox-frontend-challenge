@@ -1,14 +1,13 @@
 import { useAppDispatch, useAppSelector } from './hooks/redux'
-import { setCurrentPage } from './store/pokemonSlice'
+import { setCurrentPage, setItemsPerPage } from './store/pokemonSlice'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { getPokemonPagination, type PokemonResponse } from './api/pokemon'
-import { Pagination } from './component/Pagination'
-import { Input, Layout } from 'antd'
+import { Input, Layout, Pagination } from 'antd'
 import { PokemonGrid } from './component/PokemonGrid'
 import { useState } from 'react'
 import { LoadingIcon } from './component/icons/LoadingIcon'
 
-const { Content } = Layout
+const { Header, Content, Footer } = Layout
 
 function App() {
   const dispatch = useAppDispatch()
@@ -35,34 +34,47 @@ function App() {
     dispatch(setCurrentPage(page))
   }
 
+  const handlePageSizeChange = (size: number) => {
+    dispatch(setItemsPerPage(size))
+  }
+
   return (
-    <div className="min-w-screen !min-h-screen flex flex-col !bg-white">
-      <Content className="px-10 py-6 flex flex-col max-w-[1144px] w-full mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-6">
-          <span className="text-green-300">Looq</span>Dex
-        </h1>
+    <>
+      <Header>
+        <div></div>
+      </Header>
+      <div className="min-w-screen !min-h-screen flex flex-col !bg-white">
+        <Content className="px-10 py-6 flex flex-col max-w-[1144px] w-full mx-auto">
+          <h1 className="text-3xl font-bold text-center mb-6">
+            <span className="text-green-300">Looq</span>Dex
+          </h1>
 
-        <div className="w-full flex justify-center items-center my-6">
-          <Input.Search
-            placeholder="Buscar Pokémon..."
-            onSearch={handleSearch}
-            enterButton
-            allowClear
-            className="max-w-md"
-          />
-        </div>
+          <div className="w-full flex justify-center items-center my-6">
+            <Input.Search
+              placeholder="Buscar Pokémon..."
+              onSearch={handleSearch}
+              enterButton
+              allowClear
+              className="max-w-md"
+            />
+          </div>
 
-        <HandleState loading={isLoading} data={data} error={error} />
+          <HandleState loading={isLoading} data={data} error={error} />
 
-        <div className="mt-8 flex justify-center">
-          <Pagination
-            currentPage={currentPage}
-            totalPages={Math.ceil((data?.totalCount ?? 1) / itemsPerPage)}
-            onPageChange={handlePageChange}
-          />
-        </div>
-      </Content>
-    </div>
+          <div className="mt-8 flex justify-center">
+            <Pagination
+              current={currentPage}
+              total={data?.totalCount ?? 1}
+              pageSize={itemsPerPage}
+              showSizeChanger
+              onChange={(page) => handlePageChange(page)}
+              onShowSizeChange={(_, size) => handlePageSizeChange(size)}
+            />
+          </div>
+        </Content>
+      </div>
+      <Footer></Footer>
+    </>
   )
 }
 
@@ -84,7 +96,9 @@ const HandleState = ({
       </div>
     )
   } else if (error) {
-    ;<p className="text-red-500 text-center mt-8">Erro ao carregar pokémons</p>
+    return (
+      <p className="text-red-500 text-center mt-8">Erro ao carregar pokémons</p>
+    )
   }
 }
 
