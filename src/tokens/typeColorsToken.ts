@@ -9,7 +9,7 @@ export const typeColorsToken: Record<string, string> = {
   poison: '#a65395',
   ground: '#d2b150',
   flying: '#8899ff',
-  pyscho: '#ff5599',
+  psychic: '#ff5599',
   bug: '#aabb22',
   roch: '#b4a362',
   ghost: '#6666ba',
