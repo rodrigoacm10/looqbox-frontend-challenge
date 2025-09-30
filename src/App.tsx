@@ -3,11 +3,12 @@ import { setCurrentPage } from './store/pokemonSlice'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { getPokemonPagination, type PokemonResponse } from './api/pokemon'
 import { Pagination } from './component/Pagination'
-import { Col, Input, Layout, Row } from 'antd'
+import { Input, Layout } from 'antd'
 import { PokemonGrid } from './component/PokemonGrid'
 import { useState } from 'react'
+import { LoadingIcon } from './component/icons/LoadingIcon'
 
-const { Header, Content } = Layout
+const { Content } = Layout
 
 function App() {
   const dispatch = useAppDispatch()
@@ -35,21 +36,21 @@ function App() {
   }
 
   return (
-    <div className="min-w-screen !min-h-screen flex flex-col">
-      <Header className="bg-white flex justify-center">
-        <Input.Search
-          placeholder="Buscar Pokémon..."
-          onSearch={handleSearch}
-          enterButton
-          allowClear
-          className="max-w-md"
-        />
-      </Header>
-
+    <div className="min-w-screen !min-h-screen flex flex-col !bg-white">
       <Content className="px-10 py-6 flex flex-col max-w-[1144px] w-full mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6">
           <span className="text-green-300">Looq</span>Dex
         </h1>
+
+        <div className="w-full flex justify-center items-center my-6">
+          <Input.Search
+            placeholder="Buscar Pokémon..."
+            onSearch={handleSearch}
+            enterButton
+            allowClear
+            className="max-w-md"
+          />
+        </div>
 
         <HandleState loading={isLoading} data={data} error={error} />
 
@@ -77,7 +78,11 @@ const HandleState = ({
   if (data?.pokemons && !loading && !error) {
     return <PokemonGrid pokemons={data.pokemons} />
   } else if (loading) {
-    return <p>Carregando...</p>
+    return (
+      <div className="flex-1 flex items-center justify-center">
+        <LoadingIcon />
+      </div>
+    )
   } else if (error) {
     ;<p className="text-red-500 text-center mt-8">Erro ao carregar pokémons</p>
   }

@@ -1,26 +1,7 @@
-const typeColors: Record<string, string> = {
-  normal: '#aaaa99',
-  fire: '#ff4422',
-  water: '#faça isso 3090f1',
-  eletric: '#ffcc33',
-  grass: '#77cc55',
-  ice: '#66cbfe',
-  figth: '#bb5544',
-  poison: '#a65395',
-  ground: '#d2b150',
-  flying: '#8899ff',
-  pyscho: '#ff5599',
-  bug: '#aabb22',
-  roch: '#b4a362',
-  ghost: '#6666ba',
-  dragon: '#6e5edc',
-  dark: '#775544',
-  steel: '#aaaabb',
-  fairy: '#eb97eb',
-}
+import { typeColorsToken } from '../tokens/typeColorsToken'
 
 export const BadgeType = ({ type }: { type: string }) => {
-  const color = typeColors[type] || '#000000'
+  const color = typeColorsToken[type] || '#000000'
 
   return (
     <div
