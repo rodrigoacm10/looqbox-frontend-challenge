@@ -3,6 +3,10 @@ import { api } from '../utils/api'
 export type Pokemon = {
   id: number
   name: string
+  types: {
+    slot: number
+    type: { name: string; url: string }
+  }[]
   sprites: {
     front_default: string
     other: {
@@ -42,8 +46,6 @@ export const getPokemonPagination = async (
       return details
     }),
   )
-
-  console.log('POKEMONS ->', pokemons)
 
   return {
     pokemons,

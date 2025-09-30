@@ -40,7 +40,7 @@ function App() {
         />
       </Header>
 
-      <Content className="px-10 py-6 flex flex-col">
+      <Content className="px-10 py-6 flex flex-col max-w-[1144px] w-full mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6">
           <span className="text-green-300">Looq</span>Dex
         </h1>
