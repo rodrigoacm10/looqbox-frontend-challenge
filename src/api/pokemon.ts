@@ -34,7 +34,17 @@ export type PokemonResponse = {
 export const getPokemonPagination = async (
   offset: number = 0,
   limit: number = 20,
+  name?: string,
 ): Promise<{ pokemons: Pokemon[]; totalCount: number }> => {
+  if (name) {
+    try {
+      const { data } = await api.get<Pokemon>(`pokemon/${name.toLowerCase()}`)
+      return { pokemons: [data], totalCount: 1 }
+    } catch {
+      return { pokemons: [], totalCount: 0 }
+    }
+  }
+
   const { data } = await api.get<{
     results: { name: string; url: string }[]
     count: number
@@ -47,10 +57,7 @@ export const getPokemonPagination = async (
     }),
   )
 
-  return {
-    pokemons,
-    totalCount: data.count,
-  }
+  return { pokemons, totalCount: data.count }
 }
 
 export const getPokemon = async (pokemon: string) => {

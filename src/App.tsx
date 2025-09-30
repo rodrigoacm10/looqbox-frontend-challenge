@@ -1,41 +1,47 @@
 import { useAppDispatch, useAppSelector } from './hooks/redux'
 import { setCurrentPage } from './store/pokemonSlice'
-import { useQuery, keepPreviousData } from '@tanstack/react-query'
+import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { getPokemonPagination, type PokemonResponse } from './api/pokemon'
 import { Pagination } from './component/Pagination'
 import { Input, Layout } from 'antd'
 import { PokemonGrid } from './component/PokemonGrid'
+import { useState } from 'react'
 
 const { Header, Content } = Layout
 
 function App() {
   const dispatch = useAppDispatch()
   const { currentPage, itemsPerPage } = useAppSelector((state) => state.pokemon)
+  const [searchTerm, setSearchTerm] = useState('')
 
   const { data, isLoading, error } = useQuery<PokemonResponse, Error>({
-    queryKey: ['pokemons', currentPage, itemsPerPage],
+    queryKey: ['pokemons', currentPage, itemsPerPage, searchTerm],
     queryFn: () =>
-      getPokemonPagination((currentPage - 1) * itemsPerPage, itemsPerPage),
+      getPokemonPagination(
+        (currentPage - 1) * itemsPerPage,
+        itemsPerPage,
+        searchTerm || undefined,
+      ),
     placeholderData: keepPreviousData,
   })
+
+  const handleSearch = (value: string) => {
+    setSearchTerm(value.trim())
+    dispatch(setCurrentPage(1))
+  }
 
   const handlePageChange = (page: number) => {
     dispatch(setCurrentPage(page))
   }
-
-  if (isLoading) return <p className="text-center mt-8">Carregando...</p>
-  if (error)
-    return (
-      <p className="text-red-500 text-center mt-8">Erro ao carregar pokémons</p>
-    )
 
   return (
     <div className="min-w-screen !min-h-screen flex flex-col">
       <Header className="bg-white shadow px-6 py-3 flex justify-center">
         <Input.Search
           placeholder="Buscar Pokémon..."
-          onSearch={(value) => console.log('Pesquisar:', value)}
+          onSearch={handleSearch}
           enterButton
+          allowClear
           className="max-w-md"
         />
       </Header>
@@ -45,7 +51,7 @@ function App() {
           <span className="text-green-300">Looq</span>Dex
         </h1>
 
-        {data?.pokemons && <PokemonGrid pokemons={data.pokemons} />}
+        <HandleState loading={isLoading} data={data} error={error} />
 
         <div className="mt-8 flex justify-center">
           <Pagination
@@ -57,6 +63,24 @@ function App() {
       </Content>
     </div>
   )
+}
+
+const HandleState = ({
+  loading,
+  data,
+  error,
+}: {
+  loading: boolean
+  data: PokemonResponse | undefined
+  error: Error | null
+}) => {
+  if (data?.pokemons && !loading && !error) {
+    return <PokemonGrid pokemons={data.pokemons} />
+  } else if (loading) {
+    return <p>Carregando...</p>
+  } else if (error) {
+    ;<p className="text-red-500 text-center mt-8">Erro ao carregar pokémons</p>
+  }
 }
 
 export default App
