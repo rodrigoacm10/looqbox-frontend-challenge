@@ -3,6 +3,8 @@ import { api } from '../utils/api'
 export type Pokemon = {
   id: number
   name: string
+  height: number
+  weight: number
   types: {
     slot: number
     type: { name: string; url: string }
@@ -62,6 +64,8 @@ export const getPokemonPagination = async (
 
 export const getPokemon = async (pokemon: string) => {
   const { data } = await api.get<Pokemon>(`pokemon/${pokemon}`)
+
+  console.log('POKEMON', data)
 
   return { pokemon: data }
 }
