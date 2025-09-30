@@ -8,7 +8,7 @@ export interface PokemonState {
 
 const initialState: PokemonState = {
   currentPage: 1,
-  itemsPerPage: 10,
+  itemsPerPage: 20,
 }
 
 const pokemonSlice = createSlice({
