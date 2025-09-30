@@ -8,7 +8,7 @@ const typeColors: Record<string, string> = {
   figth: '#bb5544',
   poison: '#a65395',
   ground: '#d2b150',
-  fly: '#8899ff',
+  flying: '#8899ff',
   pyscho: '#ff5599',
   bug: '#aabb22',
   roch: '#b4a362',

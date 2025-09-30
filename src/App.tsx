@@ -3,7 +3,7 @@ import { setCurrentPage } from './store/pokemonSlice'
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { getPokemonPagination, type PokemonResponse } from './api/pokemon'
 import { Pagination } from './component/Pagination'
-import { Input, Layout } from 'antd'
+import { Col, Input, Layout, Row } from 'antd'
 import { PokemonGrid } from './component/PokemonGrid'
 import { useState } from 'react'
 
@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="min-w-screen !min-h-screen flex flex-col">
-      <Header className="bg-white shadow px-6 py-3 flex justify-center">
+      <Header className="bg-white flex justify-center">
         <Input.Search
           placeholder="Buscar Pokémon..."
           onSearch={handleSearch}
