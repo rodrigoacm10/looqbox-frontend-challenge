@@ -3,17 +3,12 @@ import { Card } from 'antd'
 import type { Pokemon } from '../api/pokemon'
 import { BadgeType } from './BadgeType'
 import { Link } from 'react-router-dom'
+import { getSpriteUrl } from '../utils/getSpriteUrl'
 
 export const PokemonCard = ({ pokemon }: { pokemon: Pokemon }) => {
   const [isHovered, setIsHovered] = useState(false)
 
-  const staticSprite =
-    pokemon.sprites.front_default ||
-    pokemon.sprites?.other?.['official-artwork']?.front_default
-
-  const animatedSprite =
-    pokemon.sprites.versions['generation-v']['black-white'].animated
-      .front_default || staticSprite
+  const { staticSprite, animatedSprite } = getSpriteUrl(pokemon)
 
   return (
     <Link to={`pokemon/${pokemon.id}`}>

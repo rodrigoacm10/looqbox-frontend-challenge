@@ -41,6 +41,15 @@ export type Pokemon = {
         front_default: string
       }
     }
+    versions: {
+      'generation-v': {
+        'black-white': {
+          animated: {
+            front_default: string
+          }
+        }
+      }
+    }
   }
   species: {
     name: string

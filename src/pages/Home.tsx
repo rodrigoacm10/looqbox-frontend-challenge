@@ -1,16 +1,17 @@
 import { keepPreviousData, useQuery } from '@tanstack/react-query'
-import { Input, Pagination } from 'antd'
-import { useState } from 'react'
+import { Pagination } from 'antd'
 import { useAppDispatch, useAppSelector } from '../hooks/redux'
 import { getPokemonPagination, type PokemonResponse } from '../api/pokemon'
 import { setCurrentPage, setItemsPerPage } from '../store/pokemonSlice'
 import { PokemonGrid } from '../components/PokemonGrid'
 import { LoadingIcon } from '../components/icons/LoadingIcon'
+import { PokemonSearch } from '../components/PokemonSearch'
 
 function Home() {
   const dispatch = useAppDispatch()
-  const { currentPage, itemsPerPage } = useAppSelector((state) => state.pokemon)
-  const [searchTerm, setSearchTerm] = useState('')
+  const { currentPage, itemsPerPage, searchTerm } = useAppSelector(
+    (state) => state.pokemon,
+  )
 
   const { data, isLoading, isFetching, error } = useQuery<
     PokemonResponse,
@@ -26,11 +27,6 @@ function Home() {
     placeholderData: keepPreviousData,
   })
 
-  const handleSearch = (value: string) => {
-    setSearchTerm(value.trim())
-    dispatch(setCurrentPage(1))
-  }
-
   const handlePageChange = (page: number) => {
     dispatch(setCurrentPage(page))
   }
@@ -42,17 +38,11 @@ function Home() {
   return (
     <div className="flex flex-col flex-1">
       <h1 className="text-3xl font-bold text-center mb-6">
-        <span className="text-green-300">Looq</span>Dex
+        <span className="text-green-500">Looq</span>Dex
       </h1>
 
       <div className="w-full flex justify-center items-center my-6">
-        <Input.Search
-          placeholder="Buscar Pokémon..."
-          onSearch={handleSearch}
-          enterButton
-          allowClear
-          className="max-w-md"
-        />
+        <PokemonSearch redirectToHome={false} />
       </div>
 
       <HandleState

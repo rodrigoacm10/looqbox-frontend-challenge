@@ -10,6 +10,7 @@ import { StatsChart } from '../components/graphs/StatsChart'
 import type { AbilityDetail } from '../api/abilities'
 import { PokemonMoviments } from '../components/PokemonMoviments'
 import { InfoBlock } from '../components/InfoBlock'
+import { getSpriteUrl } from '../utils/getSpriteUrl'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
@@ -46,10 +47,12 @@ function PokemonDetail() {
   const species = data.species
   const abilities = data.abilities
 
+  const { staticSprite } = getSpriteUrl(pokemon)
+
   return (
-    <div className="flex flex-col flex-1 px-4">
+    <div className="flex flex-col flex-1">
       <Link to="/" className="mb-4">
-        <Button icon={<ArrowLeftOutlined />}>Voltar</Button>
+        <Button icon={<ArrowLeftOutlined />}>Go back</Button>
       </Link>
 
       <Row gutter={16}>
@@ -63,10 +66,7 @@ function PokemonDetail() {
             </div>
 
             <img
-              src={
-                pokemon.sprites?.other?.['official-artwork']?.front_default ||
-                pokemon.sprites.front_default
-              }
+              src={staticSprite}
               alt={pokemon.name}
               className="w-40 h-40 mx-auto object-contain mb-4"
             />

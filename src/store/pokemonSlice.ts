@@ -4,11 +4,13 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 export interface PokemonState {
   currentPage: number
   itemsPerPage: number
+  searchTerm: string
 }
 
 const initialState: PokemonState = {
   currentPage: 1,
   itemsPerPage: 20,
+  searchTerm: '',
 }
 
 const pokemonSlice = createSlice({
@@ -22,8 +24,13 @@ const pokemonSlice = createSlice({
       state.itemsPerPage = action.payload
       state.currentPage = 1
     },
+    setSearchTerm: (state, action: PayloadAction<string>) => {
+      state.searchTerm = action.payload
+      state.currentPage = 1
+    },
   },
 })
 
-export const { setCurrentPage, setItemsPerPage } = pokemonSlice.actions
+export const { setCurrentPage, setItemsPerPage, setSearchTerm } =
+  pokemonSlice.actions
 export default pokemonSlice.reducer
