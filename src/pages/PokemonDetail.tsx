@@ -14,6 +14,7 @@ import { getSpriteUrl } from '../utils/getSpriteUrl'
 import { PokemonChainList } from '../components/PokemonChainList'
 import type { TypeDetail } from '../api/types'
 import { PokemonEffectivenessTable } from '../components/PokemonEffectivenessTable'
+import { StateMessage } from '../components/StateMessage'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
@@ -50,12 +51,12 @@ function PokemonDetail() {
     !data.types
   ) {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center gap-4">
-        <p className="text-red-500">Pokémon não encontrado</p>
-        <Link to="/">
-          <Button type="primary">Voltar</Button>
-        </Link>
-      </div>
+      <StateMessage
+        img="../../public/not-found-icon.png"
+        alt="Not Found Icon"
+        text="Pokémon not found"
+        color="text-[#6d6e71]"
+      />
     )
   }
 
@@ -90,6 +91,7 @@ function PokemonDetail() {
               alt={pokemon.name}
               className="w-40 h-40 mx-auto object-contain mb-4"
             />
+
             <div className="flex justify-center gap-2 mt-2">
               {pokemon.types.map((t) => (
                 <BadgeType key={t.type.name} type={t.type.name} />
@@ -108,13 +110,13 @@ function PokemonDetail() {
               <InfoBlock
                 minW={75}
                 upper={false}
-                label="Heigth"
+                label="Height"
                 value={`${pokemon.height / 10} m`}
               />
               <InfoBlock
                 minW={75}
                 upper={false}
-                label="Weigth"
+                label="Weight"
                 value={`${pokemon.weight / 10} kg`}
               />
               <InfoBlock
@@ -136,7 +138,7 @@ function PokemonDetail() {
 
         <Col xs={24} md={17}>
           <Card className="shadow">
-            <h2 className="text-2xl font-bold">Status and Caracteristcs</h2>
+            <h2 className="text-2xl font-bold">Stats and Characteristics</h2>
 
             <div className="flex flex-wrap gap-2">
               {pokemon.stats.map((stat) => (
@@ -158,7 +160,6 @@ function PokemonDetail() {
 
               <Col xs={24} md={12}>
                 <h3 className="font-bold text-lg">Abilities</h3>
-
                 <div className="flex flex-col gap-3 mt-2">
                   {abilities.map((ability) => {
                     const name =
@@ -191,7 +192,6 @@ function PokemonDetail() {
               <h3 className="font-bold text-lg text-center my-4">
                 Types Effectiveness
               </h3>
-
               <PokemonEffectivenessTable types={types} />
             </div>
           </Card>

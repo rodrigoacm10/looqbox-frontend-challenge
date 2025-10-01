@@ -6,6 +6,7 @@ import { setCurrentPage, setItemsPerPage } from '../store/pokemonSlice'
 import { PokemonGrid } from '../components/PokemonGrid'
 import { LoadingIcon } from '../components/icons/LoadingIcon'
 import { PokemonSearch } from '../components/PokemonSearch'
+import { StateMessage } from '../components/StateMessage'
 
 function Home() {
   const dispatch = useAppDispatch()
@@ -78,19 +79,48 @@ const HandleState = ({
   data: PokemonResponse | undefined
   error: Error | null
 }) => {
-  if (data?.pokemons && !loading && !error && !fetching) {
-    return <PokemonGrid pokemons={data.pokemons} />
-  } else if (loading || fetching) {
+  if (loading || fetching) {
     return (
-      <div className="flex-1 flex items-center justify-center">
+      <div className="flex-1 flex items-center justify-center flex-col gap-4">
         <LoadingIcon />
+        <p className="text-gray-600 font-semibold">Loading Pokémons...</p>
       </div>
     )
-  } else if (error) {
+  }
+
+  if (error) {
     return (
-      <p className="text-red-500 text-center mt-8">Erro ao carregar pokémons</p>
+      <StateMessage
+        img="../../public/error-icon.png"
+        alt="Error Icon"
+        text="Error loading Pokémons"
+        color="text-[#a40000]"
+      />
     )
   }
-}
 
+  if (data?.pokemons?.length === 0) {
+    return (
+      <StateMessage
+        img="../../public/not-found-icon.png"
+        alt="Not Found Icon"
+        text="No Pokémon found"
+        color="text-[#6d6e71]"
+      />
+    )
+  }
+
+  if (data?.pokemons && data.pokemons.length > 0) {
+    return <PokemonGrid pokemons={data.pokemons} />
+  }
+
+  return (
+    <StateMessage
+      img="../../public/error-icon.png"
+      alt="Error Icon"
+      text="Unexpected error"
+      color="text-[#a40000]"
+    />
+  )
+}
 export default Home

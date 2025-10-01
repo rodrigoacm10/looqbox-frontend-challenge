@@ -10,7 +10,6 @@ export default function Layout() {
 
   return (
     <AntLayout className="min-w-screen !min-h-screen">
-      // !bg-gradient-to-r !from-[#40da62] !to-[#6d6e71]
       <Header className="!bg-gradient-to-r !from-[#40da62] !to-[#6d6e71] text-white flex items-center justify-center !py-4 !h-auto">
         <div className="w-full max-w-[1144px] px-4 sm:px-6 md:px-10">
           <Row gutter={[16, 16]} align="middle">
@@ -31,7 +30,8 @@ export default function Layout() {
           </Row>
         </div>
       </Header>
-      <Content className="px-4 sm:px-6 md:px-10 py-6 max-w-[1144px] mx-auto w-full flex flex-col">
+
+      <Content className="px-4 sm:px-6 md:px-10 py-6 max-w-[1144px]  mx-auto w-full flex flex-col">
         <Outlet />
       </Content>
       <Footer className="text-center">

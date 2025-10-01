@@ -1,7 +1,14 @@
+import { StateMessage } from '../components/StateMessage'
+
 function NotFound() {
   return (
     <div className="flex flex-col flex-1">
-      <p>NotFound</p>
+      <StateMessage
+        img="../../public/error-icon.png"
+        alt="Error Icon"
+        text="Page Not Found"
+        color="text-[#a40000]"
+      />
     </div>
   )
 }
