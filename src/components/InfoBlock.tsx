@@ -1,0 +1,33 @@
+const minWidthClasses: Record<number, string> = {
+  75: 'min-w-[75px]',
+  120: 'min-w-[120px]',
+}
+
+export const InfoBlock = ({
+  label,
+  value,
+  minW = 120,
+  upper = true,
+}: {
+  label: string
+  value: string | number
+  upper?: boolean
+  minW?: number
+}) => {
+  return (
+    <div
+      className={`flex-1 text-center p-3 shadow rounded ${
+        minWidthClasses[minW] ?? ''
+      }`}
+    >
+      <p
+        className={`font-semibold text-sm opacity-60 whitespace-nowrap ${
+          upper ? 'uppercase' : ''
+        }`}
+      >
+        {label}
+      </p>
+      <p className="font-bold text-lg">{value}</p>
+    </div>
+  )
+}

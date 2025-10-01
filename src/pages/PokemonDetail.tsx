@@ -8,6 +8,8 @@ import { ArrowLeftOutlined } from '@ant-design/icons'
 import type { PokemonSpecies } from '../api/species'
 import { StatsChart } from '../components/graphs/StatsChart'
 import type { AbilityDetail } from '../api/abilities'
+import { PokemonMoviments } from '../components/PokemonMoviments'
+import { InfoBlock } from '../components/InfoBlock'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
@@ -44,9 +46,6 @@ function PokemonDetail() {
   const species = data.species
   const abilities = data.abilities
 
-  /* <p>
-              <strong>Cor:</strong> {species?.color.name}
-            </p> */
   return (
     <div className="flex flex-col flex-1 px-4">
       <Link to="/" className="mb-4">
@@ -86,26 +85,24 @@ function PokemonDetail() {
             </p>
 
             <div className="flex flex-wrap gap-2 mt-3">
-              <div className="rounded-md shadow p-2 text-center flex-1 min-w-[75px]">
-                <p className="font-semibold opacity-60">Heigth</p>
-                <p className="font-semibold text-lg whitespace-nowrap">
-                  {pokemon.height / 10} m
-                </p>
-              </div>
-
-              <div className="rounded-md shadow p-2 text-center flex-1 min-w-[75px]">
-                <p className="font-semibold opacity-60">Weigth</p>
-                <p className="font-semibold text-lg whitespace-nowrap">
-                  {pokemon.weight / 10} kg
-                </p>
-              </div>
-
-              <div className="rounded-md shadow p-2 text-center flex-1 min-w-[75px]">
-                <p className="font-semibold opacity-60">Legendary</p>
-                <p className="font-semibold text-lg">
-                  {species?.is_legendary ? 'Yes' : 'No'}
-                </p>
-              </div>
+              <InfoBlock
+                minW={75}
+                upper={false}
+                label="Heigth"
+                value={`${pokemon.height / 10} m`}
+              />
+              <InfoBlock
+                minW={75}
+                upper={false}
+                label="Weigth"
+                value={`${pokemon.weight / 10} kg`}
+              />
+              <InfoBlock
+                minW={75}
+                upper={false}
+                label="Legendary"
+                value={species?.is_legendary ? 'Yes' : 'No'}
+              />
             </div>
           </Card>
         </Col>
@@ -116,15 +113,12 @@ function PokemonDetail() {
 
             <div className="flex flex-wrap gap-2">
               {pokemon.stats.map((stat) => (
-                <div
+                <InfoBlock
                   key={stat.stat.name}
-                  className="flex-1 min-w-[125px] text-center p-3 shadow rounded"
-                >
-                  <p className="font-semibold uppercase text-sm opacity-60 whitespace-nowrap">
-                    {stat.stat.name}
-                  </p>
-                  <p className="font-bold text-lg">{stat.base_stat}</p>
-                </div>
+                  minW={120}
+                  label={stat.stat.name}
+                  value={stat.base_stat}
+                />
               ))}
             </div>
 
@@ -162,8 +156,8 @@ function PokemonDetail() {
               </Col>
             </Row>
 
-            <div className="mt-4">
-              <p className="font-semibold">Mais informações em breve...</p>
+            <div className="mt-6">
+              <PokemonMoviments moves={data.pokemon.moves} />
             </div>
           </Card>
         </Col>

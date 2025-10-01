@@ -13,6 +13,15 @@ export type Abilities = {
   slot: number
 }
 
+export type Moves = {
+  move: { name: string; url: string }
+  version_group_details: {
+    level_learned_at: number
+    move_learn_method: { name: string }
+    version_group: { name: string }
+  }[]
+}
+
 export type Pokemon = {
   id: number
   name: string
@@ -24,13 +33,7 @@ export type Pokemon = {
     type: { name: string; url: string }
   }[]
   stats: Stats[]
-  moves: {
-    move: { name: string; url: string }
-    version_group_details: {
-      level_learned_at: number
-      move_learn_method: { name: string }
-    }[]
-  }[]
+  moves: Moves[]
   sprites: {
     front_default: string
     other: {
@@ -83,6 +86,8 @@ export const getPokemon = async (pokemon: string) => {
   const { data } = await api.get<Pokemon>(`pokemon/${pokemon}`)
   const species = await getPokemonSpecies(data.species.url)
   const abilities = await getPokemonAbilities(data.abilities)
+
+  console.log('RETURNED ->', { pokemon: data, species, abilities })
 
   return { pokemon: data, species, abilities }
 }

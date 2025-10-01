@@ -11,7 +11,7 @@ export const typeColorsToken: Record<string, string> = {
   flying: '#8899ff',
   psychic: '#ff5599',
   bug: '#aabb22',
-  roch: '#b4a362',
+  rock: '#b4a362',
   ghost: '#6666ba',
   dragon: '#6e5edc',
   dark: '#775544',
