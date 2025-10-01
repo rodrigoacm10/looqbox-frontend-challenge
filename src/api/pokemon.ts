@@ -1,6 +1,7 @@
 import { api } from '../utils/api'
 import { getPokemonAbilities } from './abilities'
 import { getPokemonSpecies, getPokemonSpeciesEvolution } from './species'
+import { getPokemonTypes } from './types'
 
 export type Stats = {
   base_stat: number
@@ -22,16 +23,18 @@ export type Moves = {
   }[]
 }
 
+export type Types = {
+  slot: number
+  type: { name: string; url: string }
+}
+
 export type Pokemon = {
   id: number
   name: string
   height: number
   weight: number
   abilities: Abilities[]
-  types: {
-    slot: number
-    type: { name: string; url: string }
-  }[]
+  types: Types[]
   stats: Stats[]
   moves: Moves[]
   sprites: {
@@ -96,8 +99,15 @@ export const getPokemon = async (pokemon: string) => {
   const species = await getPokemonSpecies(data.species.url)
   const abilities = await getPokemonAbilities(data.abilities)
   const chain = await getPokemonSpeciesEvolution(species)
+  const types = await getPokemonTypes(data.types)
 
-  console.log('RETURNED ->', { pokemon: data, species, abilities, chain })
+  console.log('RETURNED ->', {
+    pokemon: data,
+    species,
+    abilities,
+    chain,
+    types,
+  })
 
-  return { pokemon: data, species, abilities, chain }
+  return { pokemon: data, species, abilities, chain, types }
 }

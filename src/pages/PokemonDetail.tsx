@@ -12,6 +12,8 @@ import { PokemonMoviments } from '../components/PokemonMoviments'
 import { InfoBlock } from '../components/InfoBlock'
 import { getSpriteUrl } from '../utils/getSpriteUrl'
 import { PokemonChainList } from '../components/PokemonChainList'
+import type { TypeDetail } from '../api/types'
+import { PokemonEffectivenessTable } from '../components/PokemonEffectivenessTable'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
@@ -22,6 +24,7 @@ function PokemonDetail() {
       species: PokemonSpecies
       abilities: AbilityDetail[]
       chain: Pokemon[]
+      types: TypeDetail[]
     },
     Error
   >({
@@ -43,7 +46,8 @@ function PokemonDetail() {
     !data?.pokemon ||
     !data?.species ||
     !data?.abilities ||
-    !data.chain
+    !data.chain ||
+    !data.types
   ) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-4">
@@ -59,6 +63,7 @@ function PokemonDetail() {
   const species = data.species
   const abilities = data.abilities
   const chain = data.chain
+  const types = data.types
 
   const { staticSprite } = getSpriteUrl(pokemon)
 
@@ -180,6 +185,14 @@ function PokemonDetail() {
 
             <div className="mt-6">
               <PokemonMoviments moves={data.pokemon.moves} />
+            </div>
+
+            <div>
+              <h3 className="font-bold text-lg text-center my-4">
+                Types Effectiveness
+              </h3>
+
+              <PokemonEffectivenessTable types={types} />
             </div>
           </Card>
         </Col>
