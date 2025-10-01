@@ -3,10 +3,42 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  //   PolarRadiusAxis,
+  PolarRadiusAxis,
   ResponsiveContainer,
+  Tooltip,
 } from 'recharts'
 import type { Stats } from '../../api/pokemon'
+
+const renderPolarAngleLabel = (props: any) => {
+  const { x, y, payload, textAnchor } = props
+  const words = payload.value.split('-')
+
+  return (
+    <text x={x} y={y} textAnchor={textAnchor} fill="#666" fontSize={10}>
+      {words.map((word: string, index: number) => (
+        <tspan key={index} x={x} dy={index === 0 ? 0 : 12}>
+          {word.toUpperCase()}
+        </tspan>
+      ))}
+    </text>
+  )
+}
+
+const CustomTooltip = ({ active, payload }: any) => {
+  if (active && payload && payload.length) {
+    const stat = payload[0].payload
+
+    return (
+      <div className="bg-white rounded-md px-4 py-2 text-xs shadow">
+        <p className="font-semibold opacity-60">{stat.subject}</p>
+        <p className="font-bold text-lg">
+          {stat.value} / {stat.fullMark}
+        </p>
+      </div>
+    )
+  }
+  return null
+}
 
 export const StatsChart = ({ stats }: { stats: Stats[] }) => {
   const chartData = stats.map((stat) => ({
@@ -17,36 +49,18 @@ export const StatsChart = ({ stats }: { stats: Stats[] }) => {
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
+      <RadarChart cx="50%" cy="50%" outerRadius="65%" data={chartData}>
         <PolarGrid stroke="#ccc" />
-        <PolarAngleAxis
-          dataKey="subject"
-          tick={{ fill: '#666', fontSize: 12 }}
-        />
-        {/* <PolarRadiusAxis angle={90} domain={[0, 255]} tick={{ fill: '#999' }} /> */}
-        {/* <PolarRadiusAxis angle={90} domain={[0, 255]} tick={{ fill: '#999' }} /> */}
+        <PolarAngleAxis dataKey="subject" tick={renderPolarAngleLabel} />
+        <PolarRadiusAxis angle={90} domain={[0, 255]} tick={false} />
         <Radar
           dataKey="value"
           stroke="#40da62"
           fill="#53d893"
           fillOpacity={0.6}
         />
+        <Tooltip content={<CustomTooltip />} />
       </RadarChart>
     </ResponsiveContainer>
   )
 }
-
-// <ResponsiveContainer>
-//   <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
-//     <PolarGrid />
-//     <PolarAngleAxis dataKey="subject" />
-//     <PolarRadiusAxis />
-//     <Radar
-//       name="Mike"
-//       dataKey="A"
-//       stroke="#8884d8"
-//       fill="#8884d8"
-//       fillOpacity={0.6}
-//     />
-//   </RadarChart>
-// </ResponsiveContainer>

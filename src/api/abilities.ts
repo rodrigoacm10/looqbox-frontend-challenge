@@ -67,5 +67,5 @@ export const getPokemonAbilities = async (abilities: Abilities[]) => {
     }),
   )
 
-  return { abilities: abilitiesFull }
+  return abilitiesFull
 }

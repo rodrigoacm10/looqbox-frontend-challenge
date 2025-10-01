@@ -84,7 +84,5 @@ export const getPokemon = async (pokemon: string) => {
   const species = await getPokemonSpecies(data.species.url)
   const abilities = await getPokemonAbilities(data.abilities)
 
-  console.log('RETORNADO ', { pokemon: data, species, abilities })
-
   return { pokemon: data, species, abilities }
 }

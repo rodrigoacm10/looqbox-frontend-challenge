@@ -7,12 +7,13 @@ import { Button, Card, Row, Col } from 'antd'
 import { ArrowLeftOutlined } from '@ant-design/icons'
 import type { PokemonSpecies } from '../api/species'
 import { StatsChart } from '../components/graphs/StatsChart'
+import type { AbilityDetail } from '../api/abilities'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
 
   const { data, isLoading, isError } = useQuery<
-    { pokemon: Pokemon; species: PokemonSpecies },
+    { pokemon: Pokemon; species: PokemonSpecies; abilities: AbilityDetail[] },
     Error
   >({
     queryKey: ['pokemon', id],
@@ -28,7 +29,7 @@ function PokemonDetail() {
     )
   }
 
-  if (isError || !data?.pokemon || !data?.species) {
+  if (isError || !data?.pokemon || !data?.species || !data?.abilities) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-4">
         <p className="text-red-500">Pokémon não encontrado</p>
@@ -41,10 +42,7 @@ function PokemonDetail() {
 
   const pokemon = data.pokemon
   const species = data.species
-
-  // const description = data?.abilities[0]?.effect_entries.find(
-  //   (e) => e.language.name === 'en',
-  // )?.short_effect
+  const abilities = data.abilities
 
   /* <p>
               <strong>Cor:</strong> {species?.color.name}
@@ -88,24 +86,24 @@ function PokemonDetail() {
             </p>
 
             <div className="flex flex-wrap gap-2 mt-3">
-              <div className="rounded-md shadow p-2 text-center flex-1">
-                <p className="font-semibold opacity-60">Legendary</p>
-                <p className="font-semibold text-lg">
-                  {species?.is_legendary ? 'Yes' : 'No'}
-                </p>
-              </div>
-
-              <div className="rounded-md shadow p-2 text-center flex-1">
+              <div className="rounded-md shadow p-2 text-center flex-1 min-w-[75px]">
                 <p className="font-semibold opacity-60">Heigth</p>
                 <p className="font-semibold text-lg whitespace-nowrap">
                   {pokemon.height / 10} m
                 </p>
               </div>
 
-              <div className="rounded-md shadow p-2 text-center flex-1">
+              <div className="rounded-md shadow p-2 text-center flex-1 min-w-[75px]">
                 <p className="font-semibold opacity-60">Weigth</p>
                 <p className="font-semibold text-lg whitespace-nowrap">
                   {pokemon.weight / 10} kg
+                </p>
+              </div>
+
+              <div className="rounded-md shadow p-2 text-center flex-1 min-w-[75px]">
+                <p className="font-semibold opacity-60">Legendary</p>
+                <p className="font-semibold text-lg">
+                  {species?.is_legendary ? 'Yes' : 'No'}
                 </p>
               </div>
             </div>
@@ -138,9 +136,29 @@ function PokemonDetail() {
               </Col>
 
               <Col xs={24} md={12}>
-                <h3>Habilities</h3>
+                <h3 className="font-bold text-lg">Abilities</h3>
 
-                <p></p>
+                <div className="flex flex-col gap-3 mt-2">
+                  {abilities.map((ability) => {
+                    const name =
+                      ability.names.find((n) => n.language.name === 'en')
+                        ?.name || ability.name
+                    const effect =
+                      ability.effect_entries.find(
+                        (e) => e.language.name === 'en',
+                      )?.short_effect || 'No description available'
+
+                    return (
+                      <div
+                        key={ability.id}
+                        className="p-2 rounded shadow bg-gray-50"
+                      >
+                        <p className="font-semibold capitalize">{name}</p>
+                        <p className="text-sm opacity-80">{effect}</p>
+                      </div>
+                    )
+                  })}
+                </div>
               </Col>
             </Row>
 
