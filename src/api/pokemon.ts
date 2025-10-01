@@ -1,6 +1,6 @@
 import { api } from '../utils/api'
 import { getPokemonAbilities } from './abilities'
-import { getPokemonSpecies } from './species'
+import { getPokemonSpecies, getPokemonSpeciesEvolution } from './species'
 
 export type Stats = {
   base_stat: number
@@ -95,8 +95,9 @@ export const getPokemon = async (pokemon: string) => {
   const { data } = await api.get<Pokemon>(`pokemon/${pokemon}`)
   const species = await getPokemonSpecies(data.species.url)
   const abilities = await getPokemonAbilities(data.abilities)
+  const chain = await getPokemonSpeciesEvolution(species)
 
-  console.log('RETURNED ->', { pokemon: data, species, abilities })
+  console.log('RETURNED ->', { pokemon: data, species, abilities, chain })
 
-  return { pokemon: data, species, abilities }
+  return { pokemon: data, species, abilities, chain }
 }

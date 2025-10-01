@@ -37,7 +37,7 @@ function Home() {
 
   return (
     <div className="flex flex-col flex-1">
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-4">
         <img src="../../public/logo-looqdex.png" className="max-h-24" />
       </div>
 

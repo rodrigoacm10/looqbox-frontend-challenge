@@ -8,10 +8,22 @@ import {
   Tooltip,
 } from 'recharts'
 import type { Stats } from '../../api/pokemon'
+import type { TickItemTextProps } from 'recharts/types/polar/PolarAngleAxis'
 
-const renderPolarAngleLabel = (props: any) => {
+interface TooltipPayload {
+  subject: string
+  value: number
+  fullMark: number
+}
+
+interface CustomTooltipProps {
+  active?: boolean
+  payload?: Array<{ payload: TooltipPayload }>
+}
+
+const renderPolarAngleLabel = (props: TickItemTextProps) => {
   const { x, y, payload, textAnchor } = props
-  const words = payload.value.split('-')
+  const words = (payload?.value as string)?.split('-') || []
 
   return (
     <text x={x} y={y} textAnchor={textAnchor} fill="#666" fontSize={10}>
@@ -24,7 +36,7 @@ const renderPolarAngleLabel = (props: any) => {
   )
 }
 
-const CustomTooltip = ({ active, payload }: any) => {
+const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     const stat = payload[0].payload
 

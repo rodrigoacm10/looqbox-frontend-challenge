@@ -11,12 +11,18 @@ import type { AbilityDetail } from '../api/abilities'
 import { PokemonMoviments } from '../components/PokemonMoviments'
 import { InfoBlock } from '../components/InfoBlock'
 import { getSpriteUrl } from '../utils/getSpriteUrl'
+import { PokemonChainList } from '../components/PokemonChainList'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
 
   const { data, isLoading, isError } = useQuery<
-    { pokemon: Pokemon; species: PokemonSpecies; abilities: AbilityDetail[] },
+    {
+      pokemon: Pokemon
+      species: PokemonSpecies
+      abilities: AbilityDetail[]
+      chain: Pokemon[]
+    },
     Error
   >({
     queryKey: ['pokemon', id],
@@ -32,7 +38,13 @@ function PokemonDetail() {
     )
   }
 
-  if (isError || !data?.pokemon || !data?.species || !data?.abilities) {
+  if (
+    isError ||
+    !data?.pokemon ||
+    !data?.species ||
+    !data?.abilities ||
+    !data.chain
+  ) {
     return (
       <div className="flex-1 flex flex-col items-center justify-center gap-4">
         <p className="text-red-500">Pokémon não encontrado</p>
@@ -46,6 +58,7 @@ function PokemonDetail() {
   const pokemon = data.pokemon
   const species = data.species
   const abilities = data.abilities
+  const chain = data.chain
 
   const { staticSprite } = getSpriteUrl(pokemon)
 
@@ -57,7 +70,7 @@ function PokemonDetail() {
 
       <Row gutter={16}>
         <Col xs={24} md={7}>
-          <Card className="">
+          <Card className="shadow">
             <div className="mb-2">
               <h2 className="font-bold text-2xl capitalize">
                 {pokemon.name.split('-').join(' ')}
@@ -107,10 +120,17 @@ function PokemonDetail() {
               />
             </div>
           </Card>
+
+          <div className="my-4 w-full">
+            <h3 className="font-bold text-center text-lg mb-3">
+              Evolution chain
+            </h3>
+            <PokemonChainList chain={chain} />
+          </div>
         </Col>
 
         <Col xs={24} md={17}>
-          <Card>
+          <Card className="shadow">
             <h2 className="text-2xl font-bold">Status and Caracteristcs</h2>
 
             <div className="flex flex-wrap gap-2">

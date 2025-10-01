@@ -13,7 +13,7 @@ export const PokemonCard = ({ pokemon }: { pokemon: Pokemon }) => {
   return (
     <Link to={`pokemon/${pokemon.id}`}>
       <Card
-        className="group"
+        className="group shadow"
         hoverable
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
