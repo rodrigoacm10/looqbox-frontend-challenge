@@ -27,7 +27,7 @@ export const InfoBlock = ({
       >
         {label}
       </p>
-      <p className="font-bold text-lg">{value}</p>
+      <p className="font-bold text-lg whitespace-nowrap">{value}</p>
     </div>
   )
 }

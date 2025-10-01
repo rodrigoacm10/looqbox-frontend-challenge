@@ -21,7 +21,7 @@ export const PokemonSearch = ({
   }, [searchTerm])
 
   const handleSearch = (value: string) => {
-    dispatch(setSearchTerm(value.trim()))
+    dispatch(setSearchTerm(value.trim().split(' ').join('-')))
 
     if (redirectToHome && location.pathname !== '/') {
       navigate('/')
@@ -31,7 +31,7 @@ export const PokemonSearch = ({
   return (
     <Input.Search
       placeholder="Buscar Pokémon..."
-      value={localValue}
+      value={localValue.split('-').join(' ')}
       onChange={(e) => setLocalValue(e.target.value)}
       onSearch={handleSearch}
       enterButton

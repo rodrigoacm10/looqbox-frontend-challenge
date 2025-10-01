@@ -37,7 +37,7 @@ export const PokemonCard = ({ pokemon }: { pokemon: Pokemon }) => {
           title={
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center">
-                <p className="capitalize">
+                <p className="capitalize max-w-[140px] truncate">
                   {pokemon.name.split('-').join(' ')}
                 </p>
                 <p className="opacity-80 font-normal text-sm">
@@ -45,7 +45,7 @@ export const PokemonCard = ({ pokemon }: { pokemon: Pokemon }) => {
                 </p>
               </div>
 
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 flex-wrap">
                 {pokemon.types.map((type) => (
                   <BadgeType
                     key={pokemon.id + type.type.name}
