@@ -21,7 +21,7 @@ export const PokemonCard = ({ pokemon }: { pokemon: Pokemon }) => {
           staticSprite || animatedSprite ? (
             <img
               src={isHovered ? animatedSprite : staticSprite}
-              alt={pokemon.name}
+              alt={pokemon.name.split('-').join(' ')}
               className={`w-36 h-36 mx-auto my-4 object-contain transition-transform duration-300 card-container-hover:scale-105 ${
                 isHovered ? 'scale-105' : 'scale-100'
               }`}
@@ -37,8 +37,8 @@ export const PokemonCard = ({ pokemon }: { pokemon: Pokemon }) => {
           title={
             <div className="flex flex-col gap-2">
               <div className="flex justify-between items-center">
-                <p>
-                  {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+                <p className="capitalize">
+                  {pokemon.name.split('-').join(' ')}
                 </p>
                 <p className="opacity-80 font-normal text-sm">
                   #{pokemon.id.toString().padStart(4, '0')}

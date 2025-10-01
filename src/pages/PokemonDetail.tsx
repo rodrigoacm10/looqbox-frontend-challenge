@@ -59,7 +59,9 @@ function PokemonDetail() {
         <Col xs={24} md={7}>
           <Card className="">
             <div className="mb-2">
-              <h2 className="font-bold text-2xl capitalize">{pokemon.name}</h2>
+              <h2 className="font-bold text-2xl capitalize">
+                {pokemon.name.split('-').join(' ')}
+              </h2>
               <p className="text-lg font-semibold opacity-50">
                 #{pokemon.id.toString().padStart(4, '0')}
               </p>
