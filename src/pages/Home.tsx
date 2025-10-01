@@ -37,9 +37,9 @@ function Home() {
 
   return (
     <div className="flex flex-col flex-1">
-      <h1 className="text-3xl font-bold text-center mb-6">
-        <span className="text-green-500">Looq</span>Dex
-      </h1>
+      <div className="flex justify-center items-center">
+        <img src="../../public/logo-looqdex.png" className="max-h-24" />
+      </div>
 
       <div className="w-full flex justify-center items-center my-6">
         <PokemonSearch redirectToHome={false} />

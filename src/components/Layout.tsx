@@ -11,14 +11,19 @@ export default function Layout() {
   return (
     <AntLayout className="min-w-screen !min-h-screen">
       {!isHome && (
+        // !bg-gradient-to-r !from-[#40da62] !to-[#6d6e71]
         <Header className="!bg-gradient-to-r !from-[#40da62] !to-[#6d6e71] text-white flex items-center justify-center !py-4 !h-auto">
           <div className="w-full max-w-[1144px] px-4 sm:px-6 md:px-10">
             <Row gutter={[16, 16]} align="middle">
-              <Col xs={24} md={8} className="text-center md:text-left">
-                <Link to="/">
-                  <h1 className="text-xl font-bold text-white whitespace-nowrap cursor-pointer hover:opacity-80 transition-opacity">
-                    LooqDex
-                  </h1>
+              <Col xs={24} md={8} className="flex ">
+                <Link
+                  to="/"
+                  className="flex-1 flex justify-center md:justify-start"
+                >
+                  <img
+                    src="../../public/logo-looqdex.png"
+                    className="max-h-10"
+                  />
                 </Link>
               </Col>
 
