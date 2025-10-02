@@ -275,7 +275,6 @@ describe('getPokemon', () => {
       },
     ]
 
-    // 2️⃣ ACT
     vi.mocked(api.get).mockResolvedValueOnce({ data: mockPokemon })
     vi.mocked(getPokemonSpecies).mockResolvedValueOnce(mockSpecies)
     vi.mocked(getPokemonAbilities).mockResolvedValueOnce(mockAbilities)
@@ -284,7 +283,6 @@ describe('getPokemon', () => {
 
     const result = await getPokemon('bulbasaur')
 
-    // 3️⃣ ASSERT
     expect(api.get).toHaveBeenCalledWith('pokemon/bulbasaur')
     expect(getPokemonSpecies).toHaveBeenCalledWith(
       'https://pokeapi.co/api/v2/pokemon-species/1/',

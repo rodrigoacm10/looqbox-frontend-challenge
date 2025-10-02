@@ -1,4 +1,3 @@
-// src/api/__tests__/types.test.ts
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { getPokemonTypes, type TypeDetail } from '../types'
 import type { Types } from '../pokemon'
@@ -6,7 +5,6 @@ import type { Types } from '../pokemon'
 describe('getPokemonTypes', () => {
   beforeEach(() => {
     vi.restoreAllMocks()
-    // 👇 Garante que fetch sempre seja um spy em todos os testes
     vi.spyOn(global, 'fetch')
   })
 
