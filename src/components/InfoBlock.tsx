@@ -21,7 +21,7 @@ export const InfoBlock = ({
       }`}
     >
       <p
-        className={`font-semibold text-sm opacity-60 whitespace-nowrap ${
+        className={`font-semibold text-xs opacity-60 whitespace-nowrap ${
           upper ? 'uppercase' : ''
         }`}
       >

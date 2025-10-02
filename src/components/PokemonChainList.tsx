@@ -10,9 +10,9 @@ export const PokemonChainList = ({ chain }: { chain: Pokemon[] }) => {
           <Link
             key={pokemon.id}
             to={`/pokemon/${pokemon.id}`}
-            className="flex-1"
+            className="flex-1 flex items-center"
           >
-            <div className="bg-white rounded-lg flex justify-center items-center p-2 hover:bg-gray-50 transition-colors">
+            <div className="flex-1 h-full bg-white rounded-lg flex justify-center items-center p-4 hover:bg-gray-50 transition-colors">
               <SpriteHoverAnimated pokemon={pokemon} />
             </div>
           </Link>
