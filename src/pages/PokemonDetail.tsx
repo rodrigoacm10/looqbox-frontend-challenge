@@ -3,18 +3,18 @@ import { useQuery } from '@tanstack/react-query'
 import { getPokemon, type Pokemon } from '../api/pokemon'
 import { LoadingIcon } from '../components/icons/LoadingIcon'
 import { BadgeType } from '../components/BadgeType'
-import { Button, Card, Row, Col } from 'antd'
-import { ArrowLeftOutlined } from '@ant-design/icons'
+import { Button, Card, Row, Col, message } from 'antd'
+import { ArrowLeftOutlined, SoundOutlined } from '@ant-design/icons'
 import type { PokemonSpecies } from '../api/species'
 import { StatsChart } from '../components/graphs/StatsChart'
 import type { AbilityDetail } from '../api/abilities'
 import { PokemonMoviments } from '../components/PokemonMoviments'
 import { InfoBlock } from '../components/InfoBlock'
-import { getSpriteUrl } from '../utils/getSpriteUrl'
 import { PokemonChainList } from '../components/PokemonChainList'
 import type { TypeDetail } from '../api/types'
 import { PokemonEffectivenessTable } from '../components/PokemonEffectivenessTable'
 import { StateMessage } from '../components/StateMessage'
+import { SpriteHoverAnimated } from '../components/SpriteHoverAnimated'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
@@ -66,7 +66,18 @@ function PokemonDetail() {
   const chain = data.chain
   const types = data.types
 
-  const { staticSprite } = getSpriteUrl(pokemon)
+  const handleRoar = () => {
+    const cryUrl = pokemon?.cries?.latest || pokemon?.cries?.legacy
+    if (!cryUrl) {
+      message.warning('This Pokémon has no roar available!')
+      return
+    }
+
+    const audio = new Audio(cryUrl)
+    audio.play().catch(() => {
+      message.error('Failed to play Pokémon cry')
+    })
+  }
 
   return (
     <div className="flex flex-col flex-1">
@@ -86,16 +97,25 @@ function PokemonDetail() {
               </p>
             </div>
 
-            <img
-              src={staticSprite}
-              alt={pokemon.name}
-              className="w-40 h-40 mx-auto object-contain mb-4"
+            <SpriteHoverAnimated
+              pokemon={pokemon}
+              className="!w-40 !h-40 mx-auto mb-4"
             />
 
             <div className="flex justify-center gap-2 mt-2">
               {pokemon.types.map((t) => (
                 <BadgeType key={t.type.name} type={t.type.name} />
               ))}
+            </div>
+
+            <div className="flex justify-center mt-2">
+              <Button
+                type="primary"
+                icon={<SoundOutlined />}
+                onClick={() => handleRoar()}
+              >
+                Roar
+              </Button>
             </div>
 
             <p className="mt-4">
@@ -132,7 +152,13 @@ function PokemonDetail() {
             <h3 className="font-bold text-center text-lg mb-3">
               Evolution chain
             </h3>
-            <PokemonChainList chain={chain} />
+            {chain.length > 1 ? (
+              <PokemonChainList chain={chain} />
+            ) : (
+              <p className="font-bold text-center opacity-60">
+                Unique Evolution
+              </p>
+            )}
           </div>
         </Col>
 
