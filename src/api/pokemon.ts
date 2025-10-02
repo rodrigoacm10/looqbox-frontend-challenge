@@ -105,13 +105,5 @@ export const getPokemon = async (pokemon: string) => {
   const chain = await getPokemonSpeciesEvolution(species)
   const types = await getPokemonTypes(data.types)
 
-  console.log('RETURNED ->', {
-    pokemon: data,
-    species,
-    abilities,
-    chain,
-    types,
-  })
-
   return { pokemon: data, species, abilities, chain, types }
 }

@@ -1,5 +1,5 @@
 const minWidthClasses: Record<number, string> = {
-  75: 'min-w-[75px]',
+  80: 'min-w-[80px]',
   120: 'min-w-[120px]',
 }
 

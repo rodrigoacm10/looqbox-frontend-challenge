@@ -128,22 +128,34 @@ function PokemonDetail() {
 
             <div className="flex flex-wrap gap-2 mt-3">
               <InfoBlock
-                minW={75}
+                minW={80}
                 upper={false}
                 label="Height"
                 value={`${pokemon.height / 10} m`}
               />
               <InfoBlock
-                minW={75}
+                minW={80}
                 upper={false}
                 label="Weight"
                 value={`${pokemon.weight / 10} kg`}
               />
               <InfoBlock
-                minW={75}
+                minW={80}
+                upper={false}
+                label="Baby"
+                value={species?.is_baby ? 'Yes' : 'No'}
+              />
+              <InfoBlock
+                minW={80}
                 upper={false}
                 label="Legendary"
                 value={species?.is_legendary ? 'Yes' : 'No'}
+              />
+              <InfoBlock
+                minW={80}
+                upper={false}
+                label="Mythical"
+                value={species?.is_mythical ? 'Yes' : 'No'}
               />
             </div>
           </Card>

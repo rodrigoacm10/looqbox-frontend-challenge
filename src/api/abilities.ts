@@ -1,20 +1,6 @@
 import { api } from '../utils/api'
 import type { Abilities } from './pokemon'
 
-// export type AbilityDetail = {
-//   id: number
-//   name: string
-//   effect_entries: {
-//     effect: string
-//     short_effect: string
-//     language: { name: string }
-//   }[]
-//   flavor_text_entries: {
-//     flavor_text: string
-//     language: { name: string }
-//   }[]
-// }
-
 export type AbilityDetail = {
   id: number
   name: string

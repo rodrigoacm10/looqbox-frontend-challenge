@@ -2,7 +2,7 @@ export const typeColorsToken: Record<string, string> = {
   normal: '#aaaa99',
   fire: '#ff4422',
   water: '#3090f1',
-  eletric: '#ffcc33',
+  electric: '#ffcc33',
   grass: '#77cc55',
   ice: '#66cbfe',
   figth: '#bb5544',
