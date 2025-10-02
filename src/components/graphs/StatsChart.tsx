@@ -21,7 +21,7 @@ interface CustomTooltipProps {
   payload?: Array<{ payload: TooltipPayload }>
 }
 
-const renderPolarAngleLabel = (props: TickItemTextProps) => {
+export const renderPolarAngleLabel = (props: TickItemTextProps) => {
   const { x, y, payload, textAnchor } = props
   const words = (payload?.value as string)?.split('-') || []
 
@@ -36,10 +36,9 @@ const renderPolarAngleLabel = (props: TickItemTextProps) => {
   )
 }
 
-const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
+export const CustomTooltip = ({ active, payload }: CustomTooltipProps) => {
   if (active && payload && payload.length) {
     const stat = payload[0].payload
-
     return (
       <div className="bg-white rounded-md px-4 py-2 text-xs shadow">
         <p className="font-semibold opacity-60">{stat.subject}</p>
