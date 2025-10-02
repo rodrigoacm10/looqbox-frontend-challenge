@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { Provider } from 'react-redux'
 import { store } from './store/index.ts'
 import { ConfigProvider } from 'antd'
-import { themeToken } from './tokens/themeToken.tsx'
+import { themeToken } from './tokens/themeToken.ts'
 import { BrowserRouter } from 'react-router-dom'
 
 const queryClient = new QueryClient()
