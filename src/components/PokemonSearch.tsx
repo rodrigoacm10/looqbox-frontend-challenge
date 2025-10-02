@@ -30,7 +30,7 @@ export const PokemonSearch = ({
 
   return (
     <Input.Search
-      placeholder="Buscar Pokémon..."
+      placeholder="Search Pokemon..."
       value={localValue.split('-').join(' ')}
       onChange={(e) => setLocalValue(e.target.value)}
       onSearch={handleSearch}

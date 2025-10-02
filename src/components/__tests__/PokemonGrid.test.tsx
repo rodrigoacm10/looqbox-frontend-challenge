@@ -59,18 +59,18 @@ describe('PokemonGrid', () => {
     },
   ]
 
-  it('renderiza a quantidade correta de PokemonCard', () => {
+  it('renders the correct number of PokemonCard components', () => {
     render(<PokemonGrid pokemons={mockPokemons} />)
     expect(screen.getAllByTestId('pokemon-card')).toHaveLength(2)
   })
 
-  it('renderiza o nome correto de cada Pokémon', () => {
+  it('renders the correct name for each Pokémon', () => {
     render(<PokemonGrid pokemons={mockPokemons} />)
     expect(screen.getByText(/bulbasaur/i)).toBeInTheDocument()
     expect(screen.getByText(/ivysaur/i)).toBeInTheDocument()
   })
 
-  it('não quebra caso a lista de pokémons esteja vazia', () => {
+  it('does not break when the list of pokémons is empty', () => {
     render(<PokemonGrid pokemons={[]} />)
     expect(screen.queryAllByTestId('pokemon-card')).toHaveLength(0)
   })

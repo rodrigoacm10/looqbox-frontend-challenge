@@ -46,9 +46,9 @@ export const PokemonMoveDetails = ({
         </div>
 
         <div className="flex flex-wrap text-sm mb-2">
-          <InfoBlock label="Power" value={data.power || 'N/A'} />
-          <InfoBlock label="Accuracy" value={data.accuracy || 'N/A'} />
-          <InfoBlock label="PP" value={data.pp} />
+          <InfoBlock label="Power" value={data.power ?? 'N/A'} />
+          <InfoBlock label="Accuracy" value={data.accuracy ?? 'N/A'} />
+          <InfoBlock label="PP" value={data.pp ?? 'N/A'} />
         </div>
 
         <p className="font-semibold mt-4">{effect}</p>
