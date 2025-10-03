@@ -1,6 +1,6 @@
 import { Outlet, useLocation, Link } from 'react-router-dom'
 import { Layout as AntLayout, Row, Col } from 'antd'
-import { PokemonSearch } from './PokemonSearch'
+import { PokemonSearch } from '../components/PokemonSearch'
 
 const { Header, Content, Footer } = AntLayout
 

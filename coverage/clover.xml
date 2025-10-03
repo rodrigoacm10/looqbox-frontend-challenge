@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1759493370501" clover="3.2.0">
-  <project timestamp="1759493370502" name="All files">
+<coverage generated="1759496405692" clover="3.2.0">
+  <project timestamp="1759496405692" name="All files">
     <metrics statements="1019" coveredstatements="992" conditionals="200" coveredconditionals="195" methods="54" coveredmethods="51" elements="1273" coveredelements="1238" complexity="0" loc="1019" ncloc="1019" packages="11" files="39" classes="39"/>
     <package name="src">
       <metrics statements="42" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
@@ -10,17 +10,17 @@
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="stmt"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="stmt"/>
-        <line num="20" count="3" type="stmt"/>
+        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
       <file name="main.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\main.tsx">
@@ -157,7 +157,7 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="356" coveredstatements="355" conditionals="69" coveredconditionals="68" methods="18" coveredmethods="18"/>
+      <metrics statements="321" coveredstatements="321" conditionals="67" coveredconditionals="67" methods="18" coveredmethods="18"/>
       <file name="BadgeType.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\BadgeType.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
@@ -198,44 +198,6 @@
         <line num="30" count="91" type="stmt"/>
         <line num="31" count="91" type="stmt"/>
         <line num="33" count="91" type="stmt"/>
-      </file>
-      <file name="Layout.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\Layout.tsx">
-        <metrics statements="35" coveredstatements="34" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="1" falsecount="1"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
-        <line num="21" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
       </file>
       <file name="PokemonCard.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonCard.tsx">
         <metrics statements="51" coveredstatements="51" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
@@ -618,22 +580,22 @@
       <file name="LoadingIcon.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\icons\LoadingIcon.tsx">
         <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="7" count="7" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
-        <line num="11" count="7" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
-        <line num="14" count="7" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
-        <line num="17" count="7" type="stmt"/>
-        <line num="19" count="7" type="stmt"/>
+        <line num="2" count="4" type="stmt"/>
+        <line num="3" count="4" type="stmt"/>
+        <line num="4" count="4" type="stmt"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="8" count="4" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+        <line num="11" count="4" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="13" count="4" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
       </file>
     </package>
     <package name="src.hooks">
@@ -707,7 +669,7 @@
       </file>
     </package>
     <package name="src.pages">
-      <metrics statements="286" coveredstatements="286" conditionals="56" coveredconditionals="53" methods="8" coveredmethods="8"/>
+      <metrics statements="321" coveredstatements="320" conditionals="58" coveredconditionals="54" methods="8" coveredmethods="8"/>
       <file name="Home.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\pages\Home.tsx">
         <metrics statements="88" coveredstatements="88" conditionals="17" coveredconditionals="17" methods="4" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
@@ -798,6 +760,44 @@
         <line num="105" count="1" type="stmt"/>
         <line num="107" count="1" type="stmt"/>
         <line num="108" count="1" type="stmt"/>
+      </file>
+      <file name="Layout.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\pages\Layout.tsx">
+        <metrics statements="35" coveredstatements="34" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="1" falsecount="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
       </file>
       <file name="NotFound.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\pages\NotFound.tsx">
         <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>

@@ -43,7 +43,7 @@ type QueryData = {
   types: TypeDetail[]
 }
 
-describe('PokemonDetail - full coverage', () => {
+describe('PokemonDetail', () => {
   const playMock = vi.fn().mockResolvedValue(undefined)
 
   Object.defineProperty(global, 'Audio', {

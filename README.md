@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# Pokedex Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Resumo do Projeto
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido como solução para o **Frontend Challenge**, utilizando a [PokeAPI](https://pokeapi.co/).  
+A aplicação é uma **Single Page Application (SPA)** em **ReactJS** que permite listar e buscar Pokémons, além de visualizar informações detalhadas sobre cada um.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 📸 Screenshots
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Página inicial (`/`)
 
-## Expanding the ESLint configuration
+Exibe lista inicial de Pokémons e barra de busca.  
+![Home Screenshot](image.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Detalhes do Pokémon (`/pokemon/:id`)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Mostra informações detalhadas de um Pokémon selecionado.  
+![Details Screenshot](image-1.png)
+![Details Moves Screenshot](image-2.png)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠 Tecnologias Utilizadas
+
+- ⚡ [Vite](https://vitejs.dev/)
+- ⚛️ [React](https://reactjs.org/)
+- 🔄 [React Query](https://tanstack.com/query/latest) – Gerenciamento de estados assíncronos
+- 🎨 [Ant Design](https://ant.design/) – Componentes UI
+- 🎨 [TailwindCSS](https://tailwindcss.com/) – Estilização com utilitários
+- 📊 [Recharts](https://recharts.org/) – Gráficos e visualizações
+- 🧪 [Vitest](https://vitest.dev/) – Testes unitários
+- 🟦 TypeScript – Tipagem estática para maior segurança no código
+
+---
+
+## 📂 Funcionalidades
+
+- 🔍 Pesquisa de Pokémons por nome
+- 📋 Listagem inicial de Pokémons com carregamento dinâmico
+- 📄 Página de detalhes com informações individuais
+- 🛣️ Rotas para `/` e `/pokemon/:id`
+- ✅ SPA dinâmica (sem reload de página)
+
+### ⭐ Extras implementados (bonus)
+
+- 🔢 Paginação
+- ⚠️ Tratamento de erros
+- 🧪 Testes unitários com cobertura
+- 🎨 UI melhorada com **Ant Design**
+- 📊 Visualização de dados com **Recharts**
+- ⚠️ Lint
+
+---
+
+## 🖥️ Como Iniciar o Projeto Localmente
+
+1. Clone este repositório:
+
+   ```bash
+   git clone https://github.com/rodrigoacm10/looqbox-frontend-challenge
+   ```
+
+2. Acesse a branch pokedex:
+
+   ```bash
+   git checkout pokedex
+   ```
+
+3. Instale as dependências:
+
+   ```bash
+   npm install
+   ```
+
+4. Rode o projeto:
+   ```bash
+   npm run dev
+   ```
+
+## 🖥️ Como Iniciar o Projeto Localmente
+
+Para rodar os testes unitários:
+
+```bash
+npm run test
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Para rodar com cobertura:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run coverage
 ```

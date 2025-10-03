@@ -48,7 +48,7 @@ vi.mock('antd', async (importOriginal) => {
     }) => (
       <div>
         <button data-testid="page-2" onClick={() => onChange(2)}>
-          Página 2
+          Page 2
         </button>
         <button
           data-testid="page-size-50"
@@ -77,7 +77,7 @@ describe('Home Page', () => {
     })
   })
 
-  it('chama queryFn com searchTerm undefined quando string vazia', () => {
+  it('calls queryFn with searchTerm undefined when empty string', () => {
     mockUseQuery.mockImplementation(
       (opts: {
         queryFn: () => Promise<PokemonResponse>
@@ -109,7 +109,7 @@ describe('Home Page', () => {
     )
   })
 
-  it('mostra loading quando isLoading é true', () => {
+  it('shows loading when isLoading is true', () => {
     mockUseQuery.mockReturnValue({
       isLoading: true,
       isFetching: false,
@@ -122,7 +122,7 @@ describe('Home Page', () => {
     expect(screen.getByText('Loading Pokémons...')).toBeInTheDocument()
   })
 
-  it('mostra loading quando isFetching é true', () => {
+  it('shows loading when isFetching is true', () => {
     mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: true,
@@ -135,7 +135,7 @@ describe('Home Page', () => {
     expect(screen.getByText('Loading Pokémons...')).toBeInTheDocument()
   })
 
-  it('mostra erro quando error existe', () => {
+  it('shows error when error exists', () => {
     mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
@@ -149,7 +149,7 @@ describe('Home Page', () => {
     )
   })
 
-  it('mostra mensagem de vazio quando não há pokemons', () => {
+  it('shows empty message when no pokemons are found', () => {
     mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
@@ -163,7 +163,7 @@ describe('Home Page', () => {
     )
   })
 
-  it('mostra grid quando há pokemons', () => {
+  it('shows grid when pokemons exist', () => {
     mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
@@ -175,7 +175,7 @@ describe('Home Page', () => {
     expect(screen.getByTestId('pokemon-grid')).toHaveTextContent('Pokemons: 1')
   })
 
-  it('mostra erro inesperado quando data é undefined', () => {
+  it('shows unexpected error when data is undefined', () => {
     mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
@@ -189,7 +189,7 @@ describe('Home Page', () => {
     )
   })
 
-  it('dispara dispatch correto ao trocar página', () => {
+  it('dispatches correct action when page changes', () => {
     mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
@@ -206,7 +206,7 @@ describe('Home Page', () => {
     )
   })
 
-  it('dispara dispatch correto ao trocar tamanho da página', () => {
+  it('dispatches correct action when page size changes', () => {
     mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,

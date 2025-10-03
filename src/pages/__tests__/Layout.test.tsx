@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import Layout from '../Layout'
 
-vi.mock('../PokemonSearch', () => ({
+vi.mock('../../components/PokemonSearch', () => ({
   PokemonSearch: ({ redirectToHome }: { redirectToHome?: boolean }) => (
     <div data-testid="pokemon-search">
       PokemonSearch (redirect={String(redirectToHome)})

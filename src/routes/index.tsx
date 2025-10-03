@@ -3,7 +3,7 @@ import { lazy } from 'react'
 const Home = lazy(() => import('../pages/Home'))
 const PokemonDetail = lazy(() => import('../pages/PokemonDetail'))
 const NotFound = lazy(() => import('../pages/NotFound'))
-const Layout = lazy(() => import('../components/Layout'))
+const Layout = lazy(() => import('../pages/Layout'))
 
 export const routes = [
   {
