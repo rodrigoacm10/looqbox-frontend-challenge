@@ -10,7 +10,6 @@ import type { PokemonSpecies } from '../../api/species'
 import type { AbilityDetail } from '../../api/abilities'
 import type { TypeDetail } from '../../api/types'
 
-// mock useQuery tipado
 vi.mock('@tanstack/react-query', async () => {
   const actual = await vi.importActual<typeof import('@tanstack/react-query')>(
     '@tanstack/react-query',
@@ -21,7 +20,6 @@ vi.mock('@tanstack/react-query', async () => {
   }
 })
 
-// mock antd.message
 vi.mock('antd', async () => {
   const actual = await vi.importActual<typeof import('antd')>('antd')
   return {
@@ -397,9 +395,7 @@ describe('PokemonDetail - full coverage', () => {
       </MemoryRouter>,
     )
 
-    // Deve cair no fallback ability.name
     expect(screen.getByText(/habilidade-br/i)).toBeInTheDocument()
-    // Deve cair no fallback "No description available"
     expect(screen.getByText(/No description available/i)).toBeInTheDocument()
   })
 

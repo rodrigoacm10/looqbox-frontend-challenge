@@ -1,40 +1,22 @@
-import { keepPreviousData, useQuery } from '@tanstack/react-query'
 import { Pagination } from 'antd'
-import { useAppDispatch, useAppSelector } from '../hooks/redux'
-import { getPokemonPagination, type PokemonResponse } from '../api/pokemon'
-import { setCurrentPage, setItemsPerPage } from '../store/pokemonSlice'
 import { PokemonGrid } from '../components/PokemonGrid'
 import { LoadingIcon } from '../components/icons/LoadingIcon'
 import { PokemonSearch } from '../components/PokemonSearch'
 import { StateMessage } from '../components/StateMessage'
+import { usePokemonList } from '../hooks/usePokemonList'
+import type { PokemonResponse } from '../api/pokemon'
 
 function Home() {
-  const dispatch = useAppDispatch()
-  const { currentPage, itemsPerPage, searchTerm } = useAppSelector(
-    (state) => state.pokemon,
-  )
-
-  const { data, isLoading, isFetching, error } = useQuery<
-    PokemonResponse,
-    Error
-  >({
-    queryKey: ['pokemons', currentPage, itemsPerPage, searchTerm],
-    queryFn: () =>
-      getPokemonPagination(
-        (currentPage - 1) * itemsPerPage,
-        itemsPerPage,
-        searchTerm || undefined,
-      ),
-    placeholderData: keepPreviousData,
-  })
-
-  const handlePageChange = (page: number) => {
-    dispatch(setCurrentPage(page))
-  }
-
-  const handlePageSizeChange = (size: number) => {
-    dispatch(setItemsPerPage(size))
-  }
+  const {
+    data,
+    isLoading,
+    isFetching,
+    error,
+    currentPage,
+    itemsPerPage,
+    handlePageChange,
+    handlePageSizeChange,
+  } = usePokemonList()
 
   return (
     <div className="flex flex-col flex-1">

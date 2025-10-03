@@ -56,9 +56,7 @@ describe('Layout', () => {
   it('renders footer with current year', () => {
     renderWithRouter(<Layout />, '/')
     const year = new Date().getFullYear().toString()
-    expect(
-      screen.getByText(`© ${year} - Meu Projeto Pokémon`),
-    ).toBeInTheDocument()
+    expect(screen.getByText(`© ${year} - Rodrigo Andrade`)).toBeInTheDocument()
   })
 
   it('handles both branches of isHome (true and false)', () => {
@@ -75,6 +73,6 @@ describe('Layout', () => {
     expect(screen.getByRole('link')).toBeInTheDocument()
     expect(screen.getByRole('img')).toBeInTheDocument()
     expect(screen.getByTestId('outlet')).toBeInTheDocument()
-    expect(screen.getByText(/Meu Projeto Pokémon/)).toBeInTheDocument()
+    expect(screen.getByText(/Rodrigo Andrade/)).toBeInTheDocument()
   })
 })

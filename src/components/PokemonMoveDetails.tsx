@@ -1,10 +1,9 @@
-import { useQuery } from '@tanstack/react-query'
-import { getPokemonMove, type MoveDetail } from '../api/moves'
 import type { Moves } from '../api/pokemon'
 import { LoadingIcon } from './icons/LoadingIcon'
 import { BadgeType } from './BadgeType'
 import { Card } from 'antd'
 import { InfoBlock } from './InfoBlock'
+import { usePokemonMovesDetails } from '../hooks/useGetPokemonMovesDetails'
 
 export const PokemonMoveDetails = ({
   url,
@@ -13,10 +12,7 @@ export const PokemonMoveDetails = ({
   url: string
   versionDetails: Moves['version_group_details']
 }) => {
-  const { data, isLoading, isError } = useQuery<MoveDetail, Error>({
-    queryKey: ['move', url],
-    queryFn: () => getPokemonMove(url),
-  })
+  const { data, isLoading, isError } = usePokemonMovesDetails(url)
 
   if (isLoading) {
     return (

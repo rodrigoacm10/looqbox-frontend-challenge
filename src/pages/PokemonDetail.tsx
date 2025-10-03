@@ -1,38 +1,20 @@
 import { useParams, Link } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
-import { getPokemon, type Pokemon } from '../api/pokemon'
-import { LoadingIcon } from '../components/icons/LoadingIcon'
-import { BadgeType } from '../components/BadgeType'
 import { Button, Card, Row, Col, message } from 'antd'
 import { ArrowLeftOutlined, SoundOutlined } from '@ant-design/icons'
-import type { PokemonSpecies } from '../api/species'
+import { LoadingIcon } from '../components/icons/LoadingIcon'
+import { BadgeType } from '../components/BadgeType'
 import { StatsChart } from '../components/graphs/StatsChart'
-import type { AbilityDetail } from '../api/abilities'
 import { PokemonMoviments } from '../components/PokemonMoviments'
 import { InfoBlock } from '../components/InfoBlock'
 import { PokemonChainList } from '../components/PokemonChainList'
-import type { TypeDetail } from '../api/types'
 import { PokemonEffectivenessTable } from '../components/PokemonEffectivenessTable'
 import { StateMessage } from '../components/StateMessage'
 import { SpriteHoverAnimated } from '../components/SpriteHoverAnimated'
+import { useGetPokemonDetails } from '../hooks/useGetPokemonDetails'
 
 function PokemonDetail() {
   const { id } = useParams<{ id: string }>()
-
-  const { data, isLoading, isError } = useQuery<
-    {
-      pokemon: Pokemon
-      species: PokemonSpecies
-      abilities: AbilityDetail[]
-      chain: Pokemon[]
-      types: TypeDetail[]
-    },
-    Error
-  >({
-    queryKey: ['pokemon', id],
-    queryFn: () => getPokemon(id!),
-    enabled: !!id,
-  })
+  const { data, isLoading, isError } = useGetPokemonDetails(id)
 
   if (isLoading) {
     return (
@@ -60,11 +42,7 @@ function PokemonDetail() {
     )
   }
 
-  const pokemon = data.pokemon
-  const species = data.species
-  const abilities = data.abilities
-  const chain = data.chain
-  const types = data.types
+  const { pokemon, species, abilities, chain, types } = data
 
   const handleRoar = () => {
     const cryUrl = pokemon?.cries?.latest || pokemon?.cries?.legacy
@@ -223,7 +201,7 @@ function PokemonDetail() {
             </Row>
 
             <div className="mt-6">
-              <PokemonMoviments moves={data.pokemon.moves} />
+              <PokemonMoviments moves={pokemon.moves} />
             </div>
 
             <div>

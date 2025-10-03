@@ -35,7 +35,7 @@ export default function Layout() {
         <Outlet />
       </Content>
       <Footer className="text-center">
-        <p>© {new Date().getFullYear()} - Meu Projeto Pokémon</p>
+        <p>© {new Date().getFullYear()} - Rodrigo Andrade</p>
       </Footer>
     </AntLayout>
   )
