@@ -15,11 +15,7 @@ createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <ConfigProvider
-          theme={{
-            token: themeToken,
-          }}
-        >
+        <ConfigProvider theme={{ token: themeToken }}>
           <Provider store={store}>
             <App />
           </Provider>

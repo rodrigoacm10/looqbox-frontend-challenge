@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1759416791978" clover="3.2.0">
-  <project timestamp="1759416791978" name="All files">
-    <metrics statements="994" coveredstatements="508" conditionals="113" coveredconditionals="105" methods="40" coveredmethods="31" elements="1147" coveredelements="644" complexity="0" loc="994" ncloc="994" packages="11" files="34" classes="34"/>
+<coverage generated="1759458653027" clover="3.2.0">
+  <project timestamp="1759458653028" name="All files">
+    <metrics statements="993" coveredstatements="947" conditionals="187" coveredconditionals="179" methods="51" coveredmethods="48" elements="1231" coveredelements="1174" complexity="0" loc="993" ncloc="993" packages="11" files="34" classes="34"/>
     <package name="src">
-      <metrics statements="43" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
-      <file name="App.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/App.tsx">
+      <metrics statements="42" coveredstatements="16" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
+      <file name="App.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\App.tsx">
         <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
+        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="11" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="18" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
         <line num="22" count="1" type="stmt"/>
       </file>
-      <file name="main.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/main.tsx">
-        <metrics statements="27" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="main.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\main.tsx">
+        <metrics statements="26" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -35,7 +35,9 @@
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
         <line num="14" count="0" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
@@ -44,19 +46,16 @@
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
         <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
       </file>
     </package>
     <package name="src.api">
-      <metrics statements="85" coveredstatements="85" conditionals="36" coveredconditionals="36" methods="8" coveredmethods="8"/>
-      <file name="abilities.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/api/abilities.ts">
+      <metrics statements="85" coveredstatements="85" conditionals="37" coveredconditionals="37" methods="8" coveredmethods="8"/>
+      <file name="abilities.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\api\abilities.ts">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="48" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -69,7 +68,7 @@
         <line num="56" count="2" type="stmt"/>
         <line num="57" count="2" type="stmt"/>
       </file>
-      <file name="moves.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/api/moves.ts">
+      <file name="moves.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\api\moves.ts">
         <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="44" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -77,18 +76,18 @@
         <line num="46" count="2" type="stmt"/>
         <line num="47" count="2" type="stmt"/>
       </file>
-      <file name="pokemon.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/api/pokemon.ts">
-        <metrics statements="35" coveredstatements="35" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="2"/>
+      <file name="pokemon.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\api\pokemon.ts">
+        <metrics statements="35" coveredstatements="35" conditionals="15" coveredconditionals="15" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="72" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="73" count="6" type="stmt"/>
-        <line num="74" count="6" type="stmt"/>
-        <line num="75" count="6" type="stmt"/>
-        <line num="76" count="6" type="stmt"/>
-        <line num="77" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="73" count="7" type="stmt"/>
+        <line num="74" count="7" type="stmt"/>
+        <line num="75" count="7" type="stmt"/>
+        <line num="76" count="7" type="stmt"/>
+        <line num="77" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="78" count="2" type="stmt"/>
         <line num="79" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="80" count="1" type="stmt"/>
@@ -96,8 +95,8 @@
         <line num="82" count="1" type="stmt"/>
         <line num="83" count="1" type="stmt"/>
         <line num="84" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="86" count="4" type="stmt"/>
-        <line num="89" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="86" count="5" type="stmt"/>
+        <line num="89" count="5" type="cond" truecount="2" falsecount="0"/>
         <line num="91" count="3" type="stmt"/>
         <line num="92" count="3" type="cond" truecount="1" falsecount="0"/>
         <line num="93" count="3" type="cond" truecount="1" falsecount="0"/>
@@ -115,7 +114,7 @@
         <line num="108" count="1" type="stmt"/>
         <line num="109" count="1" type="stmt"/>
       </file>
-      <file name="species.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/api/species.ts">
+      <file name="species.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\api\species.ts">
         <metrics statements="26" coveredstatements="26" conditionals="12" coveredconditionals="12" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="30" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -144,7 +143,7 @@
         <line num="61" count="3" type="stmt"/>
         <line num="62" count="3" type="stmt"/>
       </file>
-      <file name="types.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/api/types.ts">
+      <file name="types.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\api\types.ts">
         <metrics statements="9" coveredstatements="9" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="18" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="19" count="4" type="stmt"/>
@@ -158,210 +157,210 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="360" coveredstatements="211" conditionals="43" coveredconditionals="39" methods="17" coveredmethods="12"/>
-      <file name="BadgeType.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/BadgeType.tsx">
+      <metrics statements="360" coveredstatements="359" conditionals="69" coveredconditionals="68" methods="19" coveredmethods="18"/>
+      <file name="BadgeType.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\BadgeType.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="4" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
+        <line num="4" count="208" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="208" type="stmt"/>
+        <line num="7" count="208" type="stmt"/>
+        <line num="8" count="208" type="stmt"/>
+        <line num="9" count="208" type="stmt"/>
+        <line num="11" count="208" type="stmt"/>
+        <line num="12" count="208" type="stmt"/>
+        <line num="14" count="208" type="stmt"/>
       </file>
-      <file name="InfoBlock.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/InfoBlock.tsx">
+      <file name="InfoBlock.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\InfoBlock.tsx">
         <metrics statements="25" coveredstatements="25" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="7" type="stmt"/>
-        <line num="8" count="7" type="stmt"/>
-        <line num="9" count="7" type="stmt"/>
-        <line num="10" count="7" type="stmt"/>
-        <line num="11" count="7" type="stmt"/>
-        <line num="16" count="7" type="stmt"/>
-        <line num="17" count="7" type="stmt"/>
-        <line num="18" count="7" type="stmt"/>
-        <line num="19" count="7" type="stmt"/>
-        <line num="20" count="7" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="7" type="stmt"/>
-        <line num="23" count="7" type="stmt"/>
-        <line num="24" count="7" type="stmt"/>
-        <line num="25" count="7" type="cond" truecount="2" falsecount="0"/>
-        <line num="26" count="7" type="stmt"/>
-        <line num="28" count="7" type="stmt"/>
-        <line num="29" count="7" type="stmt"/>
-        <line num="30" count="7" type="stmt"/>
-        <line num="31" count="7" type="stmt"/>
-        <line num="33" count="7" type="stmt"/>
+        <line num="7" count="31" type="stmt"/>
+        <line num="8" count="31" type="stmt"/>
+        <line num="9" count="31" type="stmt"/>
+        <line num="10" count="31" type="stmt"/>
+        <line num="11" count="31" type="stmt"/>
+        <line num="16" count="31" type="stmt"/>
+        <line num="17" count="31" type="stmt"/>
+        <line num="18" count="31" type="stmt"/>
+        <line num="19" count="31" type="stmt"/>
+        <line num="20" count="31" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="31" type="stmt"/>
+        <line num="23" count="31" type="stmt"/>
+        <line num="24" count="31" type="stmt"/>
+        <line num="25" count="31" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="31" type="stmt"/>
+        <line num="28" count="31" type="stmt"/>
+        <line num="29" count="31" type="stmt"/>
+        <line num="30" count="31" type="stmt"/>
+        <line num="31" count="31" type="stmt"/>
+        <line num="33" count="31" type="stmt"/>
       </file>
-      <file name="Layout.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/Layout.tsx">
-        <metrics statements="35" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
+      <file name="Layout.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\Layout.tsx">
+        <metrics statements="35" coveredstatements="34" conditionals="2" coveredconditionals="1" methods="0" coveredmethods="0"/>
+        <line num="1" count="0" type="cond" truecount="1" falsecount="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
       </file>
-      <file name="PokemonCard.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/PokemonCard.tsx">
-        <metrics statements="51" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
+      <file name="PokemonCard.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonCard.tsx">
+        <metrics statements="51" coveredstatements="51" conditionals="11" coveredconditionals="11" methods="3" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="14" type="stmt"/>
+        <line num="11" count="14" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="14" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+        <line num="16" count="14" type="stmt"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="18" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="19" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="14" type="stmt"/>
+        <line num="21" count="14" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="13" type="stmt"/>
+        <line num="23" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="24" count="13" type="stmt"/>
+        <line num="25" count="13" type="stmt"/>
+        <line num="26" count="13" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="13" type="stmt"/>
+        <line num="28" count="13" type="cond" truecount="1" falsecount="0"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="36" count="14" type="stmt"/>
+        <line num="37" count="14" type="stmt"/>
+        <line num="38" count="14" type="stmt"/>
+        <line num="39" count="14" type="stmt"/>
+        <line num="40" count="14" type="stmt"/>
+        <line num="41" count="14" type="stmt"/>
+        <line num="42" count="14" type="stmt"/>
+        <line num="43" count="14" type="stmt"/>
+        <line num="44" count="14" type="stmt"/>
+        <line num="45" count="14" type="stmt"/>
+        <line num="46" count="14" type="stmt"/>
+        <line num="48" count="14" type="stmt"/>
+        <line num="49" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="50" count="28" type="stmt"/>
+        <line num="51" count="28" type="stmt"/>
+        <line num="52" count="28" type="stmt"/>
+        <line num="53" count="28" type="stmt"/>
+        <line num="54" count="14" type="stmt"/>
+        <line num="55" count="14" type="stmt"/>
+        <line num="56" count="14" type="stmt"/>
+        <line num="58" count="14" type="stmt"/>
+        <line num="59" count="14" type="stmt"/>
+        <line num="60" count="14" type="stmt"/>
+        <line num="62" count="14" type="stmt"/>
       </file>
-      <file name="PokemonChainList.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/PokemonChainList.tsx">
-        <metrics statements="18" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
+      <file name="PokemonChainList.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonChainList.tsx">
+        <metrics statements="18" coveredstatements="18" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="5" type="stmt"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="8" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
+        <line num="11" count="9" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="16" count="9" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="18" count="9" type="stmt"/>
+        <line num="20" count="5" type="stmt"/>
+        <line num="21" count="5" type="stmt"/>
+        <line num="23" count="5" type="stmt"/>
       </file>
-      <file name="PokemonEffectivenessTable.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/PokemonEffectivenessTable.tsx">
-        <metrics statements="45" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="18" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
+      <file name="PokemonEffectivenessTable.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonEffectivenessTable.tsx">
+        <metrics statements="45" coveredstatements="45" conditionals="15" coveredconditionals="15" methods="2" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="198" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="198" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="198" type="cond" truecount="2" falsecount="0"/>
+        <line num="11" count="198" type="cond" truecount="2" falsecount="0"/>
+        <line num="12" count="198" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="193" type="stmt"/>
+        <line num="14" count="193" type="stmt"/>
+        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="11" type="stmt"/>
+        <line num="18" count="11" type="stmt"/>
+        <line num="20" count="11" type="stmt"/>
+        <line num="21" count="11" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="25" count="11" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="198" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="198" type="stmt"/>
+        <line num="29" count="198" type="stmt"/>
+        <line num="30" count="198" type="stmt"/>
+        <line num="31" count="198" type="stmt"/>
+        <line num="32" count="198" type="stmt"/>
+        <line num="33" count="198" type="stmt"/>
+        <line num="34" count="198" type="stmt"/>
+        <line num="35" count="198" type="stmt"/>
+        <line num="36" count="198" type="stmt"/>
+        <line num="37" count="198" type="stmt"/>
+        <line num="39" count="198" type="stmt"/>
+        <line num="40" count="198" type="stmt"/>
+        <line num="41" count="198" type="stmt"/>
+        <line num="42" count="198" type="stmt"/>
+        <line num="43" count="198" type="stmt"/>
+        <line num="45" count="198" type="cond" truecount="1" falsecount="0"/>
+        <line num="46" count="5" type="stmt"/>
+        <line num="47" count="5" type="stmt"/>
+        <line num="48" count="5" type="stmt"/>
+        <line num="50" count="198" type="stmt"/>
+        <line num="51" count="198" type="stmt"/>
+        <line num="53" count="11" type="stmt"/>
+        <line num="54" count="11" type="stmt"/>
+        <line num="56" count="11" type="stmt"/>
       </file>
-      <file name="PokemonGrid.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/PokemonGrid.tsx">
+      <file name="PokemonGrid.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonGrid.tsx">
         <metrics statements="12" coveredstatements="12" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -376,7 +375,7 @@
         <line num="13" count="3" type="stmt"/>
         <line num="15" count="3" type="stmt"/>
       </file>
-      <file name="PokemonMoveDetails.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/PokemonMoveDetails.tsx">
+      <file name="PokemonMoveDetails.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonMoveDetails.tsx">
         <metrics statements="67" coveredstatements="67" conditionals="14" coveredconditionals="14" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -446,42 +445,42 @@
         <line num="81" count="9" type="stmt"/>
         <line num="83" count="9" type="stmt"/>
       </file>
-      <file name="PokemonMoviments.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/PokemonMoviments.tsx">
+      <file name="PokemonMoviments.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonMoviments.tsx">
         <metrics statements="32" coveredstatements="32" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
-        <line num="19" count="6" type="stmt"/>
-        <line num="21" count="6" type="stmt"/>
-        <line num="22" count="6" type="cond" truecount="1" falsecount="0"/>
-        <line num="23" count="10" type="stmt"/>
-        <line num="24" count="10" type="stmt"/>
-        <line num="25" count="10" type="stmt"/>
-        <line num="26" count="10" type="stmt"/>
-        <line num="27" count="10" type="stmt"/>
-        <line num="29" count="10" type="stmt"/>
-        <line num="31" count="10" type="stmt"/>
-        <line num="32" count="10" type="stmt"/>
-        <line num="33" count="10" type="stmt"/>
-        <line num="34" count="10" type="stmt"/>
-        <line num="35" count="10" type="stmt"/>
-        <line num="36" count="6" type="stmt"/>
-        <line num="37" count="6" type="stmt"/>
-        <line num="38" count="6" type="stmt"/>
-        <line num="39" count="6" type="stmt"/>
-        <line num="41" count="6" type="stmt"/>
+        <line num="9" count="10" type="stmt"/>
+        <line num="11" count="10" type="stmt"/>
+        <line num="12" count="10" type="stmt"/>
+        <line num="13" count="10" type="stmt"/>
+        <line num="14" count="10" type="stmt"/>
+        <line num="15" count="10" type="stmt"/>
+        <line num="16" count="10" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="22" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="14" type="stmt"/>
+        <line num="24" count="14" type="stmt"/>
+        <line num="25" count="14" type="stmt"/>
+        <line num="26" count="14" type="stmt"/>
+        <line num="27" count="14" type="stmt"/>
+        <line num="29" count="14" type="stmt"/>
+        <line num="31" count="14" type="stmt"/>
+        <line num="32" count="14" type="stmt"/>
+        <line num="33" count="14" type="stmt"/>
+        <line num="34" count="14" type="stmt"/>
+        <line num="35" count="14" type="stmt"/>
+        <line num="36" count="10" type="stmt"/>
+        <line num="37" count="10" type="stmt"/>
+        <line num="38" count="10" type="stmt"/>
+        <line num="39" count="10" type="stmt"/>
+        <line num="41" count="10" type="stmt"/>
       </file>
-      <file name="PokemonSearch.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/PokemonSearch.tsx">
+      <file name="PokemonSearch.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\PokemonSearch.tsx">
         <metrics statements="34" coveredstatements="34" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -489,76 +488,76 @@
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="7" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="8" count="182" type="stmt"/>
-        <line num="9" count="182" type="stmt"/>
-        <line num="11" count="182" type="stmt"/>
-        <line num="12" count="182" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="182" type="stmt"/>
-        <line num="15" count="182" type="stmt"/>
-        <line num="16" count="182" type="stmt"/>
-        <line num="17" count="182" type="stmt"/>
-        <line num="19" count="182" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="36" type="stmt"/>
-        <line num="21" count="182" type="stmt"/>
-        <line num="23" count="182" type="cond" truecount="1" falsecount="0"/>
-        <line num="24" count="12" type="stmt"/>
-        <line num="26" count="12" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="28" count="2" type="stmt"/>
-        <line num="29" count="12" type="stmt"/>
-        <line num="31" count="182" type="stmt"/>
-        <line num="32" count="182" type="stmt"/>
-        <line num="33" count="182" type="stmt"/>
-        <line num="34" count="182" type="stmt"/>
-        <line num="35" count="182" type="cond" truecount="1" falsecount="0"/>
-        <line num="36" count="182" type="stmt"/>
-        <line num="37" count="182" type="stmt"/>
-        <line num="38" count="182" type="stmt"/>
-        <line num="39" count="182" type="stmt"/>
-        <line num="40" count="182" type="stmt"/>
-        <line num="42" count="182" type="stmt"/>
+        <line num="8" count="91" type="stmt"/>
+        <line num="9" count="91" type="stmt"/>
+        <line num="11" count="91" type="stmt"/>
+        <line num="12" count="91" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="91" type="stmt"/>
+        <line num="15" count="91" type="stmt"/>
+        <line num="16" count="91" type="stmt"/>
+        <line num="17" count="91" type="stmt"/>
+        <line num="19" count="91" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="18" type="stmt"/>
+        <line num="21" count="91" type="stmt"/>
+        <line num="23" count="91" type="cond" truecount="1" falsecount="0"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="26" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="6" type="stmt"/>
+        <line num="31" count="91" type="stmt"/>
+        <line num="32" count="91" type="stmt"/>
+        <line num="33" count="91" type="stmt"/>
+        <line num="34" count="91" type="stmt"/>
+        <line num="35" count="91" type="cond" truecount="1" falsecount="0"/>
+        <line num="36" count="91" type="stmt"/>
+        <line num="37" count="91" type="stmt"/>
+        <line num="38" count="91" type="stmt"/>
+        <line num="39" count="91" type="stmt"/>
+        <line num="40" count="91" type="stmt"/>
+        <line num="42" count="91" type="stmt"/>
       </file>
-      <file name="SpriteHoverAnimated.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/SpriteHoverAnimated.tsx">
+      <file name="SpriteHoverAnimated.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\SpriteHoverAnimated.tsx">
         <metrics statements="21" coveredstatements="21" conditionals="7" coveredconditionals="7" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="13" type="stmt"/>
-        <line num="7" count="13" type="stmt"/>
-        <line num="8" count="13" type="stmt"/>
-        <line num="11" count="13" type="stmt"/>
-        <line num="12" count="13" type="stmt"/>
-        <line num="14" count="13" type="stmt"/>
-        <line num="16" count="13" type="stmt"/>
-        <line num="17" count="13" type="stmt"/>
-        <line num="18" count="13" type="cond" truecount="2" falsecount="0"/>
-        <line num="19" count="13" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="13" type="cond" truecount="1" falsecount="0"/>
-        <line num="21" count="13" type="stmt"/>
-        <line num="22" count="13" type="stmt"/>
-        <line num="23" count="13" type="stmt"/>
-        <line num="24" count="13" type="cond" truecount="2" falsecount="0"/>
-        <line num="25" count="13" type="stmt"/>
-        <line num="27" count="13" type="stmt"/>
-        <line num="29" count="13" type="stmt"/>
+        <line num="6" count="28" type="stmt"/>
+        <line num="7" count="28" type="stmt"/>
+        <line num="8" count="28" type="stmt"/>
+        <line num="11" count="28" type="stmt"/>
+        <line num="12" count="28" type="stmt"/>
+        <line num="14" count="28" type="stmt"/>
+        <line num="16" count="28" type="stmt"/>
+        <line num="17" count="28" type="stmt"/>
+        <line num="18" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="19" count="28" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="28" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="28" type="stmt"/>
+        <line num="22" count="28" type="stmt"/>
+        <line num="23" count="28" type="stmt"/>
+        <line num="24" count="28" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="28" type="stmt"/>
+        <line num="27" count="28" type="stmt"/>
+        <line num="29" count="28" type="stmt"/>
       </file>
-      <file name="StateMessage.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/StateMessage.tsx">
+      <file name="StateMessage.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\StateMessage.tsx">
         <metrics statements="10" coveredstatements="10" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="2" count="7" type="stmt"/>
-        <line num="3" count="7" type="stmt"/>
-        <line num="4" count="7" type="stmt"/>
-        <line num="5" count="7" type="stmt"/>
-        <line num="6" count="7" type="stmt"/>
-        <line num="12" count="7" type="stmt"/>
-        <line num="13" count="7" type="stmt"/>
-        <line num="14" count="7" type="stmt"/>
-        <line num="15" count="7" type="stmt"/>
+        <line num="2" count="9" type="stmt"/>
+        <line num="3" count="9" type="stmt"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="9" type="stmt"/>
+        <line num="6" count="9" type="stmt"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
       </file>
     </package>
     <package name="src.components.graphs">
       <metrics statements="48" coveredstatements="48" conditionals="13" coveredconditionals="13" methods="3" coveredmethods="3"/>
-      <file name="StatsChart.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/graphs/StatsChart.tsx">
+      <file name="StatsChart.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\graphs\StatsChart.tsx">
         <metrics statements="48" coveredstatements="48" conditionals="13" coveredconditionals="13" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="24" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -587,55 +586,55 @@
         <line num="51" count="2" type="stmt"/>
         <line num="52" count="2" type="stmt"/>
         <line num="54" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="55" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="56" count="6" type="stmt"/>
-        <line num="57" count="6" type="stmt"/>
-        <line num="58" count="6" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
-        <line num="64" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="66" count="1" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
-        <line num="68" count="1" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="70" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
-        <line num="75" count="1" type="stmt"/>
-        <line num="77" count="1" type="stmt"/>
+        <line num="55" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="56" count="10" type="stmt"/>
+        <line num="57" count="10" type="stmt"/>
+        <line num="58" count="10" type="stmt"/>
+        <line num="59" count="5" type="stmt"/>
+        <line num="61" count="5" type="stmt"/>
+        <line num="62" count="5" type="stmt"/>
+        <line num="63" count="5" type="stmt"/>
+        <line num="64" count="5" type="stmt"/>
+        <line num="65" count="5" type="stmt"/>
+        <line num="66" count="5" type="stmt"/>
+        <line num="67" count="5" type="stmt"/>
+        <line num="68" count="5" type="stmt"/>
+        <line num="69" count="5" type="stmt"/>
+        <line num="70" count="5" type="stmt"/>
+        <line num="71" count="5" type="stmt"/>
+        <line num="72" count="5" type="stmt"/>
+        <line num="73" count="5" type="stmt"/>
+        <line num="74" count="5" type="stmt"/>
+        <line num="75" count="5" type="stmt"/>
+        <line num="77" count="5" type="stmt"/>
       </file>
     </package>
     <package name="src.components.icons">
       <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="LoadingIcon.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/components/icons/LoadingIcon.tsx">
+      <file name="LoadingIcon.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\components\icons\LoadingIcon.tsx">
         <metrics statements="17" coveredstatements="17" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="2" count="2" type="stmt"/>
-        <line num="3" count="2" type="stmt"/>
-        <line num="4" count="2" type="stmt"/>
-        <line num="5" count="2" type="stmt"/>
-        <line num="6" count="2" type="stmt"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="8" count="2" type="stmt"/>
-        <line num="9" count="2" type="stmt"/>
-        <line num="11" count="2" type="stmt"/>
-        <line num="12" count="2" type="stmt"/>
-        <line num="13" count="2" type="stmt"/>
-        <line num="14" count="2" type="stmt"/>
-        <line num="15" count="2" type="stmt"/>
-        <line num="16" count="2" type="stmt"/>
-        <line num="17" count="2" type="stmt"/>
-        <line num="19" count="2" type="stmt"/>
+        <line num="2" count="7" type="stmt"/>
+        <line num="3" count="7" type="stmt"/>
+        <line num="4" count="7" type="stmt"/>
+        <line num="5" count="7" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
+        <line num="9" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
       </file>
     </package>
     <package name="src.hooks">
       <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="redux.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/hooks/redux.ts">
+      <file name="redux.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\hooks\redux.ts">
         <metrics statements="3" coveredstatements="3" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
@@ -643,293 +642,293 @@
       </file>
     </package>
     <package name="src.pages">
-      <metrics statements="310" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
-      <file name="Home.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/pages/Home.tsx">
-        <metrics statements="102" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="23" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="42" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="60" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="62" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
+      <metrics statements="310" coveredstatements="291" conditionals="49" coveredconditionals="43" methods="12" coveredmethods="11"/>
+      <file name="Home.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\pages\Home.tsx">
+        <metrics statements="102" coveredstatements="102" conditionals="20" coveredconditionals="20" methods="7" coveredmethods="7"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="9" type="stmt"/>
+        <line num="13" count="9" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
+        <line num="15" count="9" type="stmt"/>
+        <line num="17" count="9" type="stmt"/>
+        <line num="20" count="9" type="stmt"/>
+        <line num="21" count="9" type="stmt"/>
+        <line num="22" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="29" count="9" type="stmt"/>
+        <line num="31" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="32" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="35" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="39" count="9" type="stmt"/>
+        <line num="40" count="9" type="stmt"/>
+        <line num="41" count="9" type="stmt"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="43" count="9" type="stmt"/>
+        <line num="45" count="9" type="stmt"/>
+        <line num="46" count="9" type="stmt"/>
+        <line num="47" count="9" type="stmt"/>
+        <line num="49" count="9" type="stmt"/>
+        <line num="50" count="9" type="stmt"/>
+        <line num="51" count="9" type="stmt"/>
+        <line num="52" count="9" type="stmt"/>
+        <line num="53" count="9" type="stmt"/>
+        <line num="54" count="9" type="stmt"/>
+        <line num="56" count="9" type="stmt"/>
+        <line num="57" count="9" type="stmt"/>
+        <line num="58" count="9" type="stmt"/>
+        <line num="59" count="9" type="stmt"/>
+        <line num="60" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="61" count="9" type="stmt"/>
+        <line num="62" count="9" type="stmt"/>
+        <line num="63" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="64" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="65" count="9" type="stmt"/>
+        <line num="66" count="9" type="stmt"/>
+        <line num="67" count="9" type="stmt"/>
+        <line num="69" count="9" type="stmt"/>
+        <line num="71" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="72" count="9" type="stmt"/>
+        <line num="73" count="9" type="stmt"/>
+        <line num="74" count="9" type="stmt"/>
+        <line num="75" count="9" type="stmt"/>
+        <line num="76" count="9" type="stmt"/>
+        <line num="81" count="9" type="stmt"/>
+        <line num="82" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="89" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="91" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="94" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+        <line num="96" count="1" type="stmt"/>
+        <line num="97" count="1" type="stmt"/>
+        <line num="98" count="1" type="stmt"/>
+        <line num="100" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="102" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="103" count="4" type="stmt"/>
+        <line num="104" count="4" type="stmt"/>
+        <line num="105" count="4" type="stmt"/>
+        <line num="106" count="4" type="stmt"/>
+        <line num="107" count="4" type="stmt"/>
+        <line num="108" count="4" type="stmt"/>
+        <line num="109" count="4" type="stmt"/>
+        <line num="111" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="113" count="9" type="cond" truecount="3" falsecount="0"/>
+        <line num="114" count="1" type="stmt"/>
+        <line num="115" count="1" type="stmt"/>
+        <line num="117" count="1" type="stmt"/>
+        <line num="118" count="1" type="stmt"/>
+        <line num="119" count="1" type="stmt"/>
+        <line num="120" count="1" type="stmt"/>
+        <line num="121" count="1" type="stmt"/>
+        <line num="122" count="1" type="stmt"/>
+        <line num="123" count="1" type="stmt"/>
+        <line num="125" count="1" type="stmt"/>
+        <line num="126" count="1" type="stmt"/>
+      </file>
+      <file name="NotFound.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\pages\NotFound.tsx">
+        <metrics statements="13" coveredstatements="13" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+      <file name="PokemonDetail.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\pages\PokemonDetail.tsx">
+        <metrics statements="195" coveredstatements="176" conditionals="28" coveredconditionals="22" methods="4" coveredmethods="3"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="31" count="6" type="stmt"/>
+        <line num="32" count="6" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="34" count="6" type="stmt"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="37" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="43" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="45" count="5" type="stmt"/>
+        <line num="46" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="47" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="48" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="49" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="50" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="52" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="55" count="1" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="61" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="63" count="4" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
+        <line num="65" count="4" type="stmt"/>
+        <line num="66" count="4" type="stmt"/>
+        <line num="67" count="4" type="stmt"/>
+        <line num="69" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="70" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="71" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="72" count="0" type="stmt"/>
         <line num="73" count="0" type="stmt"/>
         <line num="74" count="0" type="stmt"/>
-        <line num="75" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="81" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="84" count="0" type="stmt"/>
-        <line num="85" count="0" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="92" count="0" type="stmt"/>
-        <line num="93" count="0" type="stmt"/>
-        <line num="94" count="0" type="stmt"/>
-        <line num="95" count="0" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
-        <line num="97" count="0" type="stmt"/>
-        <line num="98" count="0" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
-        <line num="102" count="0" type="stmt"/>
-        <line num="103" count="0" type="stmt"/>
-        <line num="104" count="0" type="stmt"/>
-        <line num="105" count="0" type="stmt"/>
-        <line num="106" count="0" type="stmt"/>
-        <line num="107" count="0" type="stmt"/>
-        <line num="108" count="0" type="stmt"/>
-        <line num="109" count="0" type="stmt"/>
-        <line num="111" count="0" type="stmt"/>
-        <line num="113" count="0" type="stmt"/>
-        <line num="114" count="0" type="stmt"/>
-        <line num="115" count="0" type="stmt"/>
-        <line num="117" count="0" type="stmt"/>
-        <line num="118" count="0" type="stmt"/>
-        <line num="119" count="0" type="stmt"/>
-        <line num="120" count="0" type="stmt"/>
-        <line num="121" count="0" type="stmt"/>
-        <line num="122" count="0" type="stmt"/>
-        <line num="123" count="0" type="stmt"/>
-        <line num="125" count="0" type="stmt"/>
-        <line num="126" count="0" type="stmt"/>
-      </file>
-      <file name="NotFound.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/pages/NotFound.tsx">
-        <metrics statements="13" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-      </file>
-      <file name="PokemonDetail.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/pages/PokemonDetail.tsx">
-        <metrics statements="195" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
-        <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
-        <line num="2" count="0" type="stmt"/>
-        <line num="3" count="0" type="stmt"/>
-        <line num="4" count="0" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
-        <line num="6" count="0" type="stmt"/>
-        <line num="7" count="0" type="stmt"/>
-        <line num="9" count="0" type="stmt"/>
-        <line num="11" count="0" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="0" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
-        <line num="31" count="0" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="41" count="0" type="stmt"/>
-        <line num="43" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
-        <line num="46" count="0" type="stmt"/>
-        <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="49" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
-        <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="61" count="0" type="stmt"/>
-        <line num="63" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
-        <line num="69" count="0" type="stmt"/>
-        <line num="70" count="0" type="stmt"/>
-        <line num="71" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
-        <line num="76" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
-        <line num="79" count="0" type="stmt"/>
-        <line num="80" count="0" type="stmt"/>
-        <line num="82" count="0" type="stmt"/>
-        <line num="83" count="0" type="stmt"/>
-        <line num="84" count="0" type="stmt"/>
-        <line num="85" count="0" type="stmt"/>
-        <line num="86" count="0" type="stmt"/>
-        <line num="88" count="0" type="stmt"/>
-        <line num="89" count="0" type="stmt"/>
-        <line num="90" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="92" count="0" type="stmt"/>
-        <line num="93" count="0" type="stmt"/>
-        <line num="94" count="0" type="stmt"/>
-        <line num="95" count="0" type="stmt"/>
-        <line num="96" count="0" type="stmt"/>
-        <line num="97" count="0" type="stmt"/>
-        <line num="98" count="0" type="stmt"/>
-        <line num="100" count="0" type="stmt"/>
-        <line num="101" count="0" type="stmt"/>
-        <line num="102" count="0" type="stmt"/>
-        <line num="103" count="0" type="stmt"/>
-        <line num="105" count="0" type="stmt"/>
-        <line num="106" count="0" type="stmt"/>
-        <line num="107" count="0" type="stmt"/>
-        <line num="108" count="0" type="stmt"/>
-        <line num="109" count="0" type="stmt"/>
-        <line num="111" count="0" type="stmt"/>
-        <line num="112" count="0" type="stmt"/>
-        <line num="113" count="0" type="stmt"/>
-        <line num="114" count="0" type="stmt"/>
-        <line num="115" count="0" type="stmt"/>
-        <line num="116" count="0" type="stmt"/>
-        <line num="118" count="0" type="stmt"/>
-        <line num="119" count="0" type="stmt"/>
-        <line num="121" count="0" type="stmt"/>
-        <line num="123" count="0" type="stmt"/>
-        <line num="124" count="0" type="stmt"/>
-        <line num="125" count="0" type="stmt"/>
-        <line num="127" count="0" type="stmt"/>
-        <line num="129" count="0" type="stmt"/>
-        <line num="130" count="0" type="stmt"/>
-        <line num="131" count="0" type="stmt"/>
-        <line num="132" count="0" type="stmt"/>
-        <line num="133" count="0" type="stmt"/>
-        <line num="134" count="0" type="stmt"/>
-        <line num="135" count="0" type="stmt"/>
-        <line num="136" count="0" type="stmt"/>
-        <line num="137" count="0" type="stmt"/>
-        <line num="138" count="0" type="stmt"/>
-        <line num="139" count="0" type="stmt"/>
-        <line num="140" count="0" type="stmt"/>
-        <line num="141" count="0" type="stmt"/>
-        <line num="142" count="0" type="stmt"/>
-        <line num="143" count="0" type="stmt"/>
-        <line num="144" count="0" type="stmt"/>
-        <line num="145" count="0" type="stmt"/>
-        <line num="146" count="0" type="stmt"/>
-        <line num="147" count="0" type="stmt"/>
-        <line num="148" count="0" type="stmt"/>
-        <line num="149" count="0" type="stmt"/>
-        <line num="150" count="0" type="stmt"/>
-        <line num="151" count="0" type="stmt"/>
-        <line num="152" count="0" type="stmt"/>
-        <line num="153" count="0" type="stmt"/>
-        <line num="154" count="0" type="stmt"/>
-        <line num="155" count="0" type="stmt"/>
-        <line num="156" count="0" type="stmt"/>
-        <line num="157" count="0" type="stmt"/>
-        <line num="158" count="0" type="stmt"/>
-        <line num="159" count="0" type="stmt"/>
-        <line num="160" count="0" type="stmt"/>
-        <line num="161" count="0" type="stmt"/>
-        <line num="163" count="0" type="stmt"/>
-        <line num="164" count="0" type="stmt"/>
-        <line num="166" count="0" type="stmt"/>
-        <line num="167" count="0" type="stmt"/>
-        <line num="168" count="0" type="stmt"/>
-        <line num="170" count="0" type="stmt"/>
-        <line num="172" count="0" type="stmt"/>
-        <line num="174" count="0" type="stmt"/>
-        <line num="175" count="0" type="stmt"/>
-        <line num="177" count="0" type="stmt"/>
-        <line num="178" count="0" type="stmt"/>
-        <line num="179" count="0" type="stmt"/>
-        <line num="181" count="0" type="stmt"/>
-        <line num="182" count="0" type="stmt"/>
-        <line num="183" count="0" type="stmt"/>
-        <line num="184" count="0" type="stmt"/>
-        <line num="185" count="0" type="stmt"/>
-        <line num="186" count="0" type="stmt"/>
-        <line num="187" count="0" type="stmt"/>
-        <line num="188" count="0" type="stmt"/>
-        <line num="189" count="0" type="stmt"/>
-        <line num="190" count="0" type="stmt"/>
-        <line num="192" count="0" type="stmt"/>
-        <line num="193" count="0" type="stmt"/>
-        <line num="194" count="0" type="stmt"/>
-        <line num="195" count="0" type="stmt"/>
-        <line num="196" count="0" type="stmt"/>
-        <line num="197" count="0" type="stmt"/>
-        <line num="199" count="0" type="stmt"/>
-        <line num="200" count="0" type="stmt"/>
-        <line num="201" count="0" type="stmt"/>
-        <line num="202" count="0" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="82" count="4" type="stmt"/>
+        <line num="83" count="4" type="stmt"/>
+        <line num="84" count="4" type="stmt"/>
+        <line num="85" count="4" type="stmt"/>
+        <line num="86" count="4" type="stmt"/>
+        <line num="88" count="4" type="stmt"/>
+        <line num="89" count="4" type="stmt"/>
+        <line num="90" count="4" type="stmt"/>
+        <line num="91" count="4" type="stmt"/>
+        <line num="92" count="4" type="stmt"/>
+        <line num="93" count="4" type="stmt"/>
+        <line num="94" count="4" type="stmt"/>
+        <line num="95" count="4" type="stmt"/>
+        <line num="96" count="4" type="stmt"/>
+        <line num="97" count="4" type="stmt"/>
+        <line num="98" count="4" type="stmt"/>
+        <line num="100" count="4" type="stmt"/>
+        <line num="101" count="4" type="stmt"/>
+        <line num="102" count="4" type="stmt"/>
+        <line num="103" count="4" type="stmt"/>
+        <line num="105" count="4" type="stmt"/>
+        <line num="106" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="107" count="4" type="stmt"/>
+        <line num="108" count="4" type="stmt"/>
+        <line num="109" count="4" type="stmt"/>
+        <line num="111" count="4" type="stmt"/>
+        <line num="112" count="4" type="stmt"/>
+        <line num="113" count="4" type="stmt"/>
+        <line num="114" count="4" type="stmt"/>
+        <line num="115" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="116" count="4" type="stmt"/>
+        <line num="118" count="4" type="stmt"/>
+        <line num="119" count="4" type="stmt"/>
+        <line num="121" count="4" type="stmt"/>
+        <line num="123" count="6" type="stmt"/>
+        <line num="124" count="6" type="stmt"/>
+        <line num="125" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="127" count="6" type="stmt"/>
+        <line num="129" count="6" type="stmt"/>
+        <line num="130" count="6" type="stmt"/>
+        <line num="131" count="6" type="stmt"/>
+        <line num="132" count="6" type="stmt"/>
+        <line num="133" count="6" type="stmt"/>
+        <line num="134" count="6" type="stmt"/>
+        <line num="135" count="6" type="stmt"/>
+        <line num="136" count="6" type="stmt"/>
+        <line num="137" count="6" type="stmt"/>
+        <line num="138" count="6" type="stmt"/>
+        <line num="139" count="6" type="stmt"/>
+        <line num="140" count="6" type="stmt"/>
+        <line num="141" count="6" type="stmt"/>
+        <line num="142" count="6" type="stmt"/>
+        <line num="143" count="6" type="stmt"/>
+        <line num="144" count="6" type="stmt"/>
+        <line num="145" count="6" type="stmt"/>
+        <line num="146" count="6" type="cond" truecount="2" falsecount="1"/>
+        <line num="147" count="6" type="stmt"/>
+        <line num="148" count="6" type="stmt"/>
+        <line num="149" count="6" type="stmt"/>
+        <line num="150" count="6" type="stmt"/>
+        <line num="151" count="6" type="stmt"/>
+        <line num="152" count="6" type="cond" truecount="2" falsecount="1"/>
+        <line num="153" count="6" type="stmt"/>
+        <line num="154" count="6" type="stmt"/>
+        <line num="155" count="6" type="stmt"/>
+        <line num="156" count="6" type="stmt"/>
+        <line num="157" count="6" type="stmt"/>
+        <line num="158" count="6" type="cond" truecount="2" falsecount="1"/>
+        <line num="159" count="6" type="stmt"/>
+        <line num="160" count="6" type="stmt"/>
+        <line num="161" count="6" type="stmt"/>
+        <line num="163" count="6" type="stmt"/>
+        <line num="164" count="6" type="stmt"/>
+        <line num="166" count="6" type="stmt"/>
+        <line num="167" count="6" type="cond" truecount="0" falsecount="1"/>
+        <line num="168" count="0" type="cond" truecount="1" falsecount="0"/>
+        <line num="170" count="4" type="stmt"/>
+        <line num="172" count="4" type="stmt"/>
+        <line num="174" count="6" type="stmt"/>
+        <line num="175" count="6" type="stmt"/>
+        <line num="177" count="6" type="stmt"/>
+        <line num="178" count="6" type="stmt"/>
+        <line num="179" count="6" type="stmt"/>
+        <line num="181" count="6" type="stmt"/>
+        <line num="182" count="6" type="cond" truecount="1" falsecount="0"/>
+        <line num="183" count="4" type="stmt"/>
+        <line num="184" count="4" type="stmt"/>
+        <line num="185" count="4" type="stmt"/>
+        <line num="186" count="4" type="stmt"/>
+        <line num="187" count="4" type="stmt"/>
+        <line num="188" count="4" type="stmt"/>
+        <line num="189" count="6" type="stmt"/>
+        <line num="190" count="6" type="stmt"/>
+        <line num="192" count="6" type="stmt"/>
+        <line num="193" count="6" type="stmt"/>
+        <line num="194" count="6" type="stmt"/>
+        <line num="195" count="6" type="stmt"/>
+        <line num="196" count="6" type="stmt"/>
+        <line num="197" count="6" type="stmt"/>
+        <line num="199" count="6" type="stmt"/>
+        <line num="200" count="6" type="stmt"/>
+        <line num="201" count="6" type="stmt"/>
+        <line num="202" count="6" type="stmt"/>
         <line num="203" count="0" type="stmt"/>
         <line num="204" count="0" type="stmt"/>
         <line num="205" count="0" type="stmt"/>
@@ -944,29 +943,29 @@
         <line num="216" count="0" type="stmt"/>
         <line num="217" count="0" type="stmt"/>
         <line num="218" count="0" type="stmt"/>
-        <line num="220" count="0" type="stmt"/>
-        <line num="221" count="0" type="stmt"/>
-        <line num="222" count="0" type="stmt"/>
-        <line num="223" count="0" type="stmt"/>
-        <line num="225" count="0" type="stmt"/>
-        <line num="226" count="0" type="stmt"/>
-        <line num="227" count="0" type="stmt"/>
-        <line num="229" count="0" type="stmt"/>
-        <line num="230" count="0" type="stmt"/>
-        <line num="232" count="0" type="stmt"/>
-        <line num="233" count="0" type="stmt"/>
-        <line num="234" count="0" type="stmt"/>
-        <line num="235" count="0" type="stmt"/>
-        <line num="236" count="0" type="stmt"/>
-        <line num="237" count="0" type="stmt"/>
-        <line num="238" count="0" type="stmt"/>
-        <line num="240" count="0" type="stmt"/>
-        <line num="242" count="0" type="stmt"/>
+        <line num="220" count="6" type="stmt"/>
+        <line num="221" count="6" type="stmt"/>
+        <line num="222" count="6" type="stmt"/>
+        <line num="223" count="6" type="stmt"/>
+        <line num="225" count="6" type="stmt"/>
+        <line num="226" count="6" type="stmt"/>
+        <line num="227" count="6" type="stmt"/>
+        <line num="229" count="6" type="stmt"/>
+        <line num="230" count="6" type="stmt"/>
+        <line num="232" count="6" type="stmt"/>
+        <line num="233" count="6" type="stmt"/>
+        <line num="234" count="6" type="stmt"/>
+        <line num="235" count="6" type="stmt"/>
+        <line num="236" count="6" type="stmt"/>
+        <line num="237" count="6" type="stmt"/>
+        <line num="238" count="6" type="stmt"/>
+        <line num="240" count="6" type="stmt"/>
+        <line num="242" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.routes">
       <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
-      <file name="index.tsx" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/routes/index.tsx">
+      <file name="index.tsx" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\routes\index.tsx">
         <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -988,7 +987,7 @@
     </package>
     <package name="src.store">
       <metrics statements="33" coveredstatements="33" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
-      <file name="index.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/store/index.ts">
+      <file name="index.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\store\index.ts">
         <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -998,7 +997,7 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
       </file>
-      <file name="pokemonSlice.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/store/pokemonSlice.ts">
+      <file name="pokemonSlice.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\store\pokemonSlice.ts">
         <metrics statements="26" coveredstatements="26" conditionals="3" coveredconditionals="3" methods="3" coveredmethods="3"/>
         <line num="1" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
@@ -1018,9 +1017,9 @@
         <line num="25" count="6" type="stmt"/>
         <line num="26" count="6" type="stmt"/>
         <line num="27" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="28" count="21" type="stmt"/>
-        <line num="29" count="21" type="stmt"/>
-        <line num="30" count="21" type="stmt"/>
+        <line num="28" count="14" type="stmt"/>
+        <line num="29" count="14" type="stmt"/>
+        <line num="30" count="14" type="stmt"/>
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="34" count="1" type="stmt"/>
@@ -1030,7 +1029,7 @@
     </package>
     <package name="src.tokens">
       <metrics statements="28" coveredstatements="28" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="themeToken.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/tokens/themeToken.ts">
+      <file name="themeToken.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\tokens\themeToken.ts">
         <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -1041,7 +1040,7 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
       </file>
-      <file name="typeColorsToken.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/tokens/typeColorsToken.ts">
+      <file name="typeColorsToken.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\tokens\typeColorsToken.ts">
         <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -1066,48 +1065,48 @@
       </file>
     </package>
     <package name="src.utils">
-      <metrics statements="51" coveredstatements="51" conditionals="10" coveredconditionals="10" methods="2" coveredmethods="2"/>
-      <file name="api.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/utils/api.ts">
+      <metrics statements="51" coveredstatements="51" conditionals="11" coveredconditionals="11" methods="2" coveredmethods="2"/>
+      <file name="api.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\utils\api.ts">
         <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
       </file>
-      <file name="getSpriteUrl.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/utils/getSpriteUrl.ts">
+      <file name="getSpriteUrl.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\utils\getSpriteUrl.ts">
         <metrics statements="10" coveredstatements="10" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
         <line num="3" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="4" count="5" type="stmt"/>
-        <line num="5" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="7" count="2" type="stmt"/>
-        <line num="9" count="5" type="stmt"/>
-        <line num="10" count="5" type="stmt"/>
-        <line num="11" count="5" type="cond" truecount="1" falsecount="0"/>
-        <line num="13" count="5" type="stmt"/>
-        <line num="14" count="5" type="stmt"/>
-      </file>
-      <file name="getTypeEffectiveness.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/utils/getTypeEffectiveness.ts">
-        <metrics statements="17" coveredstatements="17" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
-        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="8" type="stmt"/>
-        <line num="7" count="8" type="stmt"/>
-        <line num="8" count="8" type="stmt"/>
-        <line num="10" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="9" type="stmt"/>
+        <line num="5" count="9" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="9" count="9" type="stmt"/>
+        <line num="10" count="9" type="stmt"/>
         <line num="11" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="7" type="cond" truecount="1" falsecount="0"/>
         <line num="13" count="9" type="stmt"/>
-        <line num="15" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="16" count="4" type="stmt"/>
-        <line num="17" count="9" type="stmt"/>
-        <line num="19" count="9" type="cond" truecount="1" falsecount="0"/>
-        <line num="20" count="3" type="stmt"/>
-        <line num="21" count="9" type="stmt"/>
-        <line num="22" count="8" type="stmt"/>
-        <line num="24" count="8" type="stmt"/>
-        <line num="25" count="8" type="stmt"/>
+        <line num="14" count="9" type="stmt"/>
       </file>
-      <file name="getTypes.ts" path="/home/rodrigo/projects/looqbox-frontend-challenge/src/utils/getTypes.ts">
+      <file name="getTypeEffectiveness.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\utils\getTypeEffectiveness.ts">
+        <metrics statements="17" coveredstatements="17" conditionals="7" coveredconditionals="7" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="19" type="stmt"/>
+        <line num="7" count="19" type="stmt"/>
+        <line num="8" count="19" type="stmt"/>
+        <line num="10" count="19" type="cond" truecount="1" falsecount="0"/>
+        <line num="11" count="20" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="10" type="cond" truecount="1" falsecount="0"/>
+        <line num="13" count="20" type="stmt"/>
+        <line num="15" count="20" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="7" type="cond" truecount="1" falsecount="0"/>
+        <line num="17" count="20" type="stmt"/>
+        <line num="19" count="20" type="cond" truecount="1" falsecount="0"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="20" type="stmt"/>
+        <line num="22" count="19" type="stmt"/>
+        <line num="24" count="19" type="stmt"/>
+        <line num="25" count="19" type="stmt"/>
+      </file>
+      <file name="getTypes.ts" path="C:\Users\PC Gamer\OneDrive\Documentos\GitHub\looqbox-frontend-challenge\src\utils\getTypes.ts">
         <metrics statements="20" coveredstatements="20" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
