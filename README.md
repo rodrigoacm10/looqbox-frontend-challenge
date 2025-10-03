@@ -1,93 +1,93 @@
 # Pokedex Challenge
 
-## 📌 Resumo do Projeto
+## 📌 Project Summary
 
-Este projeto foi desenvolvido como solução para o **Frontend Challenge**, utilizando a [PokeAPI](https://pokeapi.co/).  
-A aplicação é uma **Single Page Application (SPA)** em **ReactJS** que permite listar e buscar Pokémons, além de visualizar informações detalhadas sobre cada um.
+This project was developed as a solution for the **Frontend Challenge**, using the [PokeAPI](https://pokeapi.co/).  
+The application is a **Single Page Application (SPA)** built with **ReactJS** that allows users to list and search for Pokémon, as well as view detailed information about each one.
 
 ---
 
 ## 📸 Screenshots
 
-### Página inicial (`/`)
+### Home Page (`/`)
 
-Exibe lista inicial de Pokémons e barra de busca.  
+Displays the initial list of Pokémon and a search bar.  
 ![Home Screenshot](image.png)
 
-### Detalhes do Pokémon (`/pokemon/:id`)
+### Pokémon Details (`/pokemon/:id`)
 
-Mostra informações detalhadas de um Pokémon selecionado.  
-![Details Screenshot](image-1.png)
+Shows detailed information about a selected Pokémon.  
+![Details Screenshot](image-1.png)  
 ![Details Moves Screenshot](image-2.png)
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Technologies Used
 
 - ⚡ [Vite](https://vitejs.dev/)
 - ⚛️ [React](https://reactjs.org/)
-- 🔄 [React Query](https://tanstack.com/query/latest) – Gerenciamento de estados assíncronos
-- 🎨 [Ant Design](https://ant.design/) – Componentes UI
-- 🎨 [TailwindCSS](https://tailwindcss.com/) – Estilização com utilitários
-- 📊 [Recharts](https://recharts.org/) – Gráficos e visualizações
-- 🧪 [Vitest](https://vitest.dev/) – Testes unitários
-- 🟦 TypeScript – Tipagem estática para maior segurança no código
+- 🔄 [React Query](https://tanstack.com/query/latest) – Asynchronous state management
+- 🎨 [Ant Design](https://ant.design/) – UI components
+- 🎨 [TailwindCSS](https://tailwindcss.com/) – Utility-first styling
+- 📊 [Recharts](https://recharts.org/) – Charts and data visualization
+- 🧪 [Vitest](https://vitest.dev/) – Unit testing
+- 🟦 TypeScript – Static typing for safer code
 
 ---
 
-## 📂 Funcionalidades
+## 📂 Features
 
-- 🔍 Pesquisa de Pokémons por nome
-- 📋 Listagem inicial de Pokémons com carregamento dinâmico
-- 📄 Página de detalhes com informações individuais
-- 🛣️ Rotas para `/` e `/pokemon/:id`
-- ✅ SPA dinâmica (sem reload de página)
+- 🔍 Search for Pokémon by name
+- 📋 Initial Pokémon listing with dynamic loading
+- 📄 Detail page with individual information
+- 🛣️ Routes for `/` and `/pokemon/:id`
+- ✅ Dynamic SPA (no page reload)
 
-### ⭐ Extras implementados (bonus)
+### ⭐ Additional Implemented Features (Bonus)
 
-- 🔢 Paginação
-- ⚠️ Tratamento de erros
-- 🧪 Testes unitários com cobertura
-- 🎨 UI melhorada com **Ant Design**
-- 📊 Visualização de dados com **Recharts**
-- ⚠️ Lint
+- 🔢 Pagination
+- ⚠️ Error handling
+- 🧪 Unit tests with coverage
+- 🎨 Enhanced UI with **Ant Design**
+- 📊 Data visualization with **Recharts**
+- ⚠️ Linting
 
 ---
 
-## 🖥️ Como Iniciar o Projeto Localmente
+## 🖥️ How to Run the Project Locally
 
-1. Clone este repositório:
+1. Clone this repository:
 
    ```bash
    git clone https://github.com/rodrigoacm10/looqbox-frontend-challenge
    ```
 
-2. Acesse a branch pokedex:
+2. Checkout the pokedex branch:
 
    ```bash
    git checkout pokedex
    ```
 
-3. Instale as dependências:
+3. Install dependencies:
 
    ```bash
    npm install
    ```
 
-4. Rode o projeto:
+4. Run the project:
    ```bash
    npm run dev
    ```
 
-## 🖥️ Como Iniciar o Projeto Localmente
+## 🖥️ Running Tests
 
-Para rodar os testes unitários:
+To run unit tests:
 
 ```bash
 npm run test
 ```
 
-Para rodar com cobertura:
+To run tests with coverage:
 
 ```bash
 npm run coverage
