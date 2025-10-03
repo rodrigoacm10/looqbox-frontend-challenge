@@ -39,7 +39,7 @@ function Home() {
   return (
     <div className="flex flex-col flex-1">
       <div className="flex justify-center items-center mt-4">
-        <img src="../../public/logo-looqdex.png" className="max-h-24" />
+        <img src="/logo-looqdex.png" className="max-h-24" />
       </div>
 
       <div className="w-full flex justify-center items-center my-6">

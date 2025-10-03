@@ -86,8 +86,8 @@ describe('getSpriteUrl', () => {
 
     const result = getSpriteUrl(mockPokemon)
 
-    expect(result.staticSprite).toBe('../../public/pokemon-svg.svg')
-    expect(result.animatedSprite).toBe('../../public/pokemon-svg.svg')
+    expect(result.staticSprite).toBe('/pokemon-svg.svg')
+    expect(result.animatedSprite).toBe('/pokemon-svg.svg')
   })
 
   it('should use static sprite as fallback when animated is null', () => {
@@ -144,7 +144,7 @@ describe('getSpriteUrl', () => {
 
     const result = getSpriteUrl(mockPokemon)
 
-    expect(result.staticSprite).toBe('../../public/pokemon-svg.svg')
-    expect(result.animatedSprite).toBe('../../public/pokemon-svg.svg')
+    expect(result.staticSprite).toBe('/pokemon-svg.svg')
+    expect(result.animatedSprite).toBe('/pokemon-svg.svg')
   })
 })

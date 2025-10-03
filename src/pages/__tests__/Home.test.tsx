@@ -1,23 +1,20 @@
-// src/pages/__tests__/Home.test.tsx
-import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { describe, it, expect, vi, beforeEach, type Mock } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
 import Home from '../Home'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, type UseQueryResult } from '@tanstack/react-query'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux'
+import type { PokemonResponse } from '../../api/pokemon'
 
-// 🔹 Mock Redux hooks
 vi.mock('../../hooks/redux', () => ({
   useAppDispatch: vi.fn(),
   useAppSelector: vi.fn(),
 }))
 
-// 🔹 Mock react-query
 vi.mock('@tanstack/react-query', () => ({
   useQuery: vi.fn(),
   keepPreviousData: {},
 }))
 
-// 🔹 Mock componentes
 vi.mock('../../components/icons/LoadingIcon', () => ({
   LoadingIcon: () => <div data-testid="loading-icon">Loading...</div>,
 }))
@@ -29,7 +26,7 @@ vi.mock('../../components/StateMessage', () => ({
 }))
 
 vi.mock('../../components/PokemonGrid', () => ({
-  PokemonGrid: ({ pokemons }: { pokemons: any[] }) => (
+  PokemonGrid: ({ pokemons }: { pokemons: { id: number; name: string }[] }) => (
     <div data-testid="pokemon-grid">{`Pokemons: ${pokemons.length}`}</div>
   ),
 }))
@@ -38,12 +35,17 @@ vi.mock('../../components/PokemonSearch', () => ({
   PokemonSearch: () => <input data-testid="pokemon-search" />,
 }))
 
-// 🔹 Mock antd Pagination
 vi.mock('antd', async (importOriginal) => {
   const antd = await importOriginal<typeof import('antd')>()
   return {
     ...antd,
-    Pagination: ({ onShowSizeChange, onChange }: any) => (
+    Pagination: ({
+      onShowSizeChange,
+      onChange,
+    }: {
+      onShowSizeChange: (current: number, size: number) => void
+      onChange: (page: number) => void
+    }) => (
       <div>
         <button data-testid="page-2" onClick={() => onChange(2)}>
           Página 2
@@ -61,11 +63,14 @@ vi.mock('antd', async (importOriginal) => {
 
 describe('Home Page', () => {
   const mockDispatch = vi.fn()
+  const mockUseQuery = useQuery as Mock
+  const mockUseAppDispatch = useAppDispatch as unknown as Mock
+  const mockUseAppSelector = useAppSelector as unknown as Mock
 
   beforeEach(() => {
     vi.clearAllMocks()
-    ;(useAppDispatch as any).mockReturnValue(mockDispatch)
-    ;(useAppSelector as any).mockReturnValue({
+    mockUseAppDispatch.mockReturnValue(mockDispatch)
+    mockUseAppSelector.mockReturnValue({
       currentPage: 1,
       itemsPerPage: 20,
       searchTerm: '',
@@ -73,39 +78,44 @@ describe('Home Page', () => {
   })
 
   it('chama queryFn com searchTerm undefined quando string vazia', () => {
-    ;(useQuery as any).mockImplementation((opts: any) => {
-      const result = opts.queryFn()
-      expect(result).resolves // só para não quebrar
-      return {
-        isLoading: false,
-        isFetching: false,
-        error: null,
-        data: { pokemons: [], totalCount: 0 },
-      }
-    })
-    ;(useAppSelector as any).mockReturnValue({
+    mockUseQuery.mockImplementation(
+      (opts: {
+        queryFn: () => Promise<PokemonResponse>
+        queryKey: unknown[]
+      }): Partial<UseQueryResult<PokemonResponse, Error>> => {
+        void opts.queryFn()
+        return {
+          isLoading: false,
+          isFetching: false,
+          error: null,
+          data: { pokemons: [], totalCount: 0 },
+        }
+      },
+    )
+
+    mockUseAppSelector.mockReturnValue({
       currentPage: 1,
       itemsPerPage: 20,
-      searchTerm: '', // 👈 força string vazia
+      searchTerm: '',
     })
 
     render(<Home />)
 
     expect(useQuery).toHaveBeenCalledWith(
       expect.objectContaining({
-        queryKey: ['pokemons', 1, 20, ''], // queryKey mantém string
+        queryKey: ['pokemons', 1, 20, ''],
         queryFn: expect.any(Function),
       }),
     )
   })
 
   it('mostra loading quando isLoading é true', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: true,
       isFetching: false,
       error: null,
       data: undefined,
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
     expect(screen.getByTestId('loading-icon')).toBeInTheDocument()
@@ -113,12 +123,12 @@ describe('Home Page', () => {
   })
 
   it('mostra loading quando isFetching é true', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: true,
       error: null,
       data: undefined,
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
     expect(screen.getByTestId('loading-icon')).toBeInTheDocument()
@@ -126,12 +136,12 @@ describe('Home Page', () => {
   })
 
   it('mostra erro quando error existe', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
       error: new Error('API error'),
       data: undefined,
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
     expect(screen.getByTestId('state-message')).toHaveTextContent(
@@ -140,12 +150,12 @@ describe('Home Page', () => {
   })
 
   it('mostra mensagem de vazio quando não há pokemons', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
       error: null,
       data: { pokemons: [], totalCount: 0 },
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
     expect(screen.getByTestId('state-message')).toHaveTextContent(
@@ -154,24 +164,24 @@ describe('Home Page', () => {
   })
 
   it('mostra grid quando há pokemons', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
       error: null,
       data: { pokemons: [{ id: 1, name: 'Pikachu' }], totalCount: 1 },
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
     expect(screen.getByTestId('pokemon-grid')).toHaveTextContent('Pokemons: 1')
   })
 
   it('mostra erro inesperado quando data é undefined', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
       error: null,
       data: undefined,
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
     expect(screen.getByTestId('state-message')).toHaveTextContent(
@@ -180,12 +190,12 @@ describe('Home Page', () => {
   })
 
   it('dispara dispatch correto ao trocar página', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
       error: null,
       data: { pokemons: [], totalCount: 100 },
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
 
@@ -197,12 +207,12 @@ describe('Home Page', () => {
   })
 
   it('dispara dispatch correto ao trocar tamanho da página', () => {
-    ;(useQuery as any).mockReturnValue({
+    mockUseQuery.mockReturnValue({
       isLoading: false,
       isFetching: false,
       error: null,
       data: { pokemons: [], totalCount: 100 },
-    })
+    } as Partial<UseQueryResult<PokemonResponse, Error>>)
 
     render(<Home />)
 

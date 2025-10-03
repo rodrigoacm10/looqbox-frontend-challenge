@@ -3,7 +3,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { PokemonMoviments } from '../PokemonMoviments'
 
 vi.mock('../PokemonMoveDetails', () => ({
-  PokemonMoveDetails: ({ url }: any) => (
+  PokemonMoveDetails: ({ url }: { url: string }) => (
     <div data-testid="pokemon-move-details">MockedMoveDetails - {url}</div>
   ),
 }))
@@ -32,28 +32,25 @@ describe('PokemonMoviments', () => {
     },
   ]
 
-  it('renderiza o título principal com a contagem', () => {
+  it('renders the main title with the count', () => {
     render(<PokemonMoviments moves={mockMoves} />)
     expect(screen.getByText(/Moviments \(2\)/i)).toBeInTheDocument()
   })
 
-  it('mostra os nomes dos moves após expandir o painel principal', () => {
+  it('shows the move names after expanding the main panel', () => {
     render(<PokemonMoviments moves={mockMoves} />)
 
-    // expandir o painel principal primeiro
     fireEvent.click(screen.getByText(/Moviments \(2\)/i))
 
     expect(screen.getByText(/tackle/i)).toBeInTheDocument()
     expect(screen.getByText(/vine whip/i)).toBeInTheDocument()
   })
 
-  it('expande um subpainel e mostra detalhes', () => {
+  it('expands a subpanel and shows details', () => {
     render(<PokemonMoviments moves={mockMoves} />)
 
-    // abrir painel raiz
     fireEvent.click(screen.getByText(/Moviments \(2\)/i))
 
-    // clicar no header do segundo move
     fireEvent.click(screen.getByText(/vine whip/i))
 
     expect(
@@ -61,7 +58,7 @@ describe('PokemonMoviments', () => {
     ).toBeInTheDocument()
   })
 
-  it('não quebra se moves estiver vazio', () => {
+  it('does not break if moves is empty', () => {
     render(<PokemonMoviments moves={[]} />)
     expect(screen.getByText(/Moviments \(0\)/i)).toBeInTheDocument()
   })

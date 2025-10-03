@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import Layout from '../Layout'
@@ -21,58 +21,60 @@ vi.mock('react-router-dom', async () => {
   }
 })
 
+function renderWithRouter(ui: React.ReactElement, route: string = '/') {
+  return render(<MemoryRouter initialEntries={[route]}>{ui}</MemoryRouter>)
+}
+
 describe('Layout', () => {
+  beforeEach(() => {
+    vi.clearAllMocks()
+  })
+
   it('renders logo with link to home', () => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Layout />
-      </MemoryRouter>,
-    )
-    const logoLink = screen.getByRole('link', { name: '' })
+    renderWithRouter(<Layout />, '/')
+    const logoLink = screen.getByRole('link')
     expect(logoLink).toHaveAttribute('href', '/')
-    expect(screen.getByRole('img')).toHaveAttribute(
-      'src',
-      '../../public/logo-looqdex.png',
-    )
+    expect(screen.getByRole('img')).toHaveAttribute('src', '/logo-looqdex.png')
   })
 
   it('does not render PokemonSearch on home route', () => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Layout />
-      </MemoryRouter>,
-    )
+    renderWithRouter(<Layout />, '/')
     expect(screen.queryByTestId('pokemon-search')).not.toBeInTheDocument()
   })
 
   it('renders PokemonSearch when not on home route', () => {
-    render(
-      <MemoryRouter initialEntries={['/pokemon/25']}>
-        <Layout />
-      </MemoryRouter>,
-    )
+    renderWithRouter(<Layout />, '/pokemon/25')
     expect(screen.getByTestId('pokemon-search')).toBeInTheDocument()
     expect(screen.getByText(/redirect=true/)).toBeInTheDocument()
   })
 
   it('renders Outlet content', () => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Layout />
-      </MemoryRouter>,
-    )
+    renderWithRouter(<Layout />, '/')
     expect(screen.getByTestId('outlet')).toHaveTextContent('Outlet content')
   })
 
   it('renders footer with current year', () => {
-    render(
-      <MemoryRouter initialEntries={['/']}>
-        <Layout />
-      </MemoryRouter>,
-    )
+    renderWithRouter(<Layout />, '/')
     const year = new Date().getFullYear().toString()
     expect(
       screen.getByText(`© ${year} - Meu Projeto Pokémon`),
     ).toBeInTheDocument()
+  })
+
+  it('handles both branches of isHome (true and false)', () => {
+    renderWithRouter(<Layout />, '/')
+    expect(screen.queryByTestId('pokemon-search')).not.toBeInTheDocument()
+
+    renderWithRouter(<Layout />, '/about')
+    expect(screen.getByTestId('pokemon-search')).toBeInTheDocument()
+  })
+
+  it('renders all layout components correctly', () => {
+    renderWithRouter(<Layout />, '/')
+
+    expect(screen.getByRole('link')).toBeInTheDocument()
+    expect(screen.getByRole('img')).toBeInTheDocument()
+    expect(screen.getByTestId('outlet')).toBeInTheDocument()
+    expect(screen.getByText(/Meu Projeto Pokémon/)).toBeInTheDocument()
   })
 })

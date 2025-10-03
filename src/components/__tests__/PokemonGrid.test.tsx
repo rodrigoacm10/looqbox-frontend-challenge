@@ -1,9 +1,10 @@
 import { render, screen, cleanup } from '@testing-library/react'
 import { describe, it, expect, vi, afterEach } from 'vitest'
 import { PokemonGrid } from '../PokemonGrid'
+import type { Pokemon } from '../../api/pokemon'
 
 vi.mock('../PokemonCard', () => ({
-  PokemonCard: ({ pokemon }: any) => (
+  PokemonCard: ({ pokemon }: { pokemon: Pokemon }) => (
     <div data-testid="pokemon-card">{pokemon.name}</div>
   ),
 }))

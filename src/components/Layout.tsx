@@ -18,7 +18,7 @@ export default function Layout() {
                 to="/"
                 className="flex-1 flex justify-center md:justify-start"
               >
-                <img src="../../public/logo-looqdex.png" className="max-h-10" />
+                <img src="/logo-looqdex.png" className="max-h-10" />
               </Link>
             </Col>
 

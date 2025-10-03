@@ -17,7 +17,7 @@ export type Abilities = {
 export type Moves = {
   move: { name: string; url: string }
   version_group_details: {
-    level_learned_at: number
+    level_learned_at: number | undefined
     move_learn_method: { name: string }
     version_group: { name: string }
   }[]

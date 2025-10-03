@@ -1,12 +1,10 @@
 import { describe, it, expect, vi } from 'vitest'
 import { render } from '@testing-library/react'
 import type { Stats } from '../../../api/pokemon'
-import {
-  StatsChart,
-  CustomTooltip,
-  renderPolarAngleLabel,
-} from '../../graphs/StatsChart'
+import { StatsChart } from '../../graphs/StatsChart'
 import React from 'react'
+import { CustomTooltip } from '../../graphs/CustomTooltip'
+import { CustomGraphLabel } from '../../graphs/CustomGraphLabel'
 
 vi.mock('recharts', async (importOriginal) => {
   const original = await importOriginal<typeof import('recharts')>()
@@ -66,10 +64,10 @@ describe('StatsChart', () => {
   })
 })
 
-describe('renderPolarAngleLabel', () => {
+describe('CustomGraphLabel', () => {
   it('should render single word in uppercase', () => {
     const { container } = render(
-      renderPolarAngleLabel({
+      CustomGraphLabel({
         x: 10,
         y: 20,
         index: 0,
@@ -82,7 +80,7 @@ describe('renderPolarAngleLabel', () => {
 
   it('should split hyphenated words into multiple tspans', () => {
     const { container } = render(
-      renderPolarAngleLabel({
+      CustomGraphLabel({
         x: 10,
         y: 20,
         index: 0,
@@ -98,7 +96,7 @@ describe('renderPolarAngleLabel', () => {
 
   it('should handle undefined payload value', () => {
     const { container } = render(
-      renderPolarAngleLabel({
+      CustomGraphLabel({
         x: 10,
         y: 20,
         index: 0,

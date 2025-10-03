@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect, vi, type Mock } from 'vitest'
 import { PokemonMoveDetails } from '../PokemonMoveDetails'
 import { useQuery } from '@tanstack/react-query'
 
@@ -11,15 +11,17 @@ vi.mock('../icons/LoadingIcon', () => ({
   LoadingIcon: () => <div data-testid="loading-icon">Loading...</div>,
 }))
 vi.mock('../BadgeType', () => ({
-  BadgeType: ({ type }: any) => <div data-testid="badge">{type}</div>,
+  BadgeType: ({ type }: { type: string }) => (
+    <div data-testid="badge">{type}</div>
+  ),
 }))
 vi.mock('../InfoBlock', () => ({
-  InfoBlock: ({ label, value }: any) => (
+  InfoBlock: ({ label, value }: { label: string; value: string | number }) => (
     <div data-testid="info-block">{`${label}:${value}`}</div>
   ),
 }))
 
-const mockedUseQuery = useQuery as unknown as jest.Mock
+const mockedUseQuery = useQuery as unknown as Mock
 
 describe('PokemonMoveDetails', () => {
   const mockUrl = '/mock-move'
@@ -232,7 +234,7 @@ describe('PokemonMoveDetails', () => {
 
     const versionDetails = [
       {
-        level_learned_at: undefined as any,
+        level_learned_at: undefined,
         move_learn_method: { name: 'tutor' },
         version_group: { name: 'sword-shield' },
       },
